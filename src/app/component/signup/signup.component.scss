@@ -1,178 +1,192 @@
-.body{
-top: 0px;
-left: 0px;
-width: 1366px;
-height: 800px;
-background: grey 0% 0% no-repeat padding-box;
-opacity: 1;
-}
 
-.signup{
-tab-size: 70px;
-top: 100px;
-left: 700px;
-width: 89px;
-height: 33px;
-text-align: right;
-font: normal normal medium 25px/33px Roboto;
-letter-spacing: 0px;
-color: #0A0102;
-text-transform: uppercase;
-opacity: 1;
-}
-.emailId{
-    margin-left: 50px;
-    margin-left: 50px;
-    padding-left: 10px;
-    top: 390px;
-left: 727px;
-width: 252px;
-height: 35px;
-background: #FFFFFF 0% 0% no-repeat padding-box;
-border: 1px solid #E2E2E2;
-border-radius: 2px;
-opacity: 1;
-}
-.password{
-    margin-left: 50px;
-    top: 396px;
-left: 727px;
-width: 252px;
-height: 35px;
-background: #FFFFFF 0% 0% no-repeat padding-box;
-border: 1px solid #E2E2E2;
-border-radius: 2px;
-opacity: 1;
-}
-
-.mobileNo{
-    margin-left: 50px;
-top: 459px;
-left: 727px;
-width: 252px;
-height: 35px;
-background: #FFFFFF 0% 0% no-repeat padding-box;
-border: 1px solid #E2E2E2;
-border-radius: 2px;
-opacity: 1;
-
-}
-.fullname{
-    margin-left: 50px;
-    top: 270px;
-    left: 727px;
-    width: 252px;
-    height: 35px;
-    background: #FFFFFF 0% 0% no-repeat padding-box;
-    border: 1px solid #FF001C;
-    border-radius: 2px;
+#body {
+    top: 0px;
+    left: 0px;
+    width: 1366px;
+    height: 768px;
+    background:gray 0% 0% no-repeat padding-box;
     opacity: 1;
+}
+.user{
+    font-weight: bolder;
+
+}
+
+.signup {
+    top: 194px;
+    left: 881px;
+    width: 89px;
+    height: 33px;
+    text-align: left;
+    text-decoration:solid;
+    font-weight:bold;
+    
+    font: normal normal medium 25px/33px Roboto;
+    letter-spacing: 0px;
+    color: #0A0102;
+    text-transform: uppercase;
+    opacity: 1;
+}
+.emailId {
+    text-align: center;
+  margin-top: 30px;
+  margin-left: 50px;
+  margin-left: 50px;
+  padding-left: 10px;
+  top: 390px;
+  left: 727px;
+  width: 250px;
+  height: 30px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #e2e2e2;
+  border-radius: 2px;
+  opacity: 1;
+}
+.password {
+  margin-top: 30px;
+  margin-left: 50px;
+  top: 396px;
+  left: 727px;
+  width: 254px;
+  height: 30px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #e2e2e2;
+  border-radius: 2px;
+  opacity: 1;
+}
+
+.mobileNo {
+  margin-top: 30px;
+  margin-left: 50px;
+  top: 459px;
+  left: 727px;
+  width: 252px;
+  height: 30px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #e2e2e2;
+  border-radius: 2px;
+  opacity: 1;
+}
+.fullname {
+text-align: center;
+  margin-left: 50px;
+  top: 270px;
+  left: 727px;
+  width: 260px;
+  height: 30px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #ff001c;
+  border-radius: 2px;
+  opacity: 1;
 }
 
 .example-card {
-    top: 185px;
-    left: 320px;
-    width: 624px;
-    height: 391px;
-    background: #F5F5F5 0% 0% no-repeat padding-box;
-    border-radius: 21px;
-    opacity: 1;
-  transition: 0.3s;
+  top: 185px;
+  left: 320px;
+  width: 624px;
+  height: 391px;
+  background: #f5f5f5 0% 0% no-repeat padding-box;
+  border-radius: 21px;
+  opacity: 1;
+  //   transition: 0.3s;
   background-color: white;
 }
 
 .image {
-    
-    margin-top: 20px;
-    width: 245px;
-    height: 245px;
-    border-radius: 50%;
-    margin-right: 326px;
-    margin-left: 53px;
+  margin-top: 50px;
+  width: 245px;
+  height: 245px;
+  border-radius: 50%;
+  margin-right: 326px;
+  margin-left: 53px;
 }
 .example-card2 {
-top: -260px;
-left: 658px;
-width: 389px;
-height: 425px;
-background: #FFFFFF 0% 0% no-repeat padding-box;
-box-shadow: 0px 5px 15px #00000029;
-border: 1px solid #E4E4E4;
-border-radius: 6px;
-opacity: 1;
+  top: -255px;
+  left: 658px;
+  width: 389px;
+  height: 425px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 5px 15px #00000029;
+  border: 1px solid #e4e4e4;
+  border-radius: 6px;
+  opacity: 1;
 }
 .h1 {
-    font: normal normal medium 18px/24px Roboto;
-    margin-left: 40px;
-    letter-spacing: 0px;
-    color: #0a0102;
-    text-transform: uppercase;
-    opacity: 1;
-    font-size: 16px;
+  font: normal normal medium 18px/24px Roboto;
+  margin-left: 60px;
+  letter-spacing: 0px;
+  color: #0a0102;
+  text-transform: uppercase;
+  opacity: 1;
+  font-size: 16px;
 }
 
 ::ng-deep .mat-tab-header {
-    border-bottom: none;
+  border-bottom: none;
 }
 ::ng-deep .mat-ink-bar {
-    background-color: black !important;
-    bottom: 50px !important;
+  background-color: black !important;
+  bottom: 50px !important;
 }
 ::ng-deep.mat-tab-label,
 ::ng-deep.mat-tab-label-active {
-    min-width: 40px !important;
-    padding: 2px !important;
-    margin: 40px !important;
+  min-width: 40px !important;
+  padding: 2px !important;
+  margin: 40px !important;
+  font-size: large;
 }
 
 .loginbutton {
-    margin-left: 50px;
-    width: 270px;
-    height: 37px;
-    background: #a03037 0% 0% no-repeat padding-box;
-    border-radius: 1px;
-    opacity: 1;
-    border: none;
-   
+  margin-left: 50px;
+  width: 270px;
+  height: 37px;
+  background: #a03037 0% 0% no-repeat padding-box;
+  border-radius: 1px;
+  opacity: 1;
+  border: none;
 }
 h2 {
-    width: 191px;
-    text-align: center;
-    border-bottom: 1px solid #000;
-    line-height: 0.1em;
-    margin: 20px 0 20px 35px;
+  width: 191px;
+  text-align: center;
+  border-bottom: 1px solid #000;
+  line-height: 0.1em;
+  margin: 20px 0 20px 35px;
 }
 
 h2 span {
-    background: #fff;
-    padding: 0 10px;
+  background: #fff;
+  padding: 0 10px;
 }
 .bottombuttons {
-    width: 126px;
-    height: 37px;
-    background: #4266b2 0% 0% no-repeat padding-box;
-    border-radius: 1px;
-    opacity: 1;
-    border: none;
+  width: 126px;
+  height: 37px;
+  background: #4266b2 0% 0% no-repeat padding-box;
+  border-radius: 1px;
+  opacity: 1;
+  border: none;
 }
 ::ng-deep .mat-tab-header-pagination {
-    display: none !important;
+  display: none !important;
 }
-.forgetpass{
-    float: right;
-    font: normal normal normal 10px/13px Roboto; letter-spacing: 0px;
-    color: #9D9D9D;
-    opacity: 1;
-    margin-right: 38px;
-    margin-top: -15px;
-}
-.signup{
-    margin-top:0px ;
-}
-mat-icon{
-    opacity: 1;
-    color:  #9D9D9D;
+.forgetpass {
+  float: right;
+  font: normal normal normal 10px/13px Roboto;
+  letter-spacing: 0px;
+  color: #9d9d9d;
+  opacity: 1;
+  margin-right: 38px;
+  margin-top: -15px;
 }
 
-::ng-deep .mat-form-field-flex > .mat-form-field-infix { padding: 0.4em 0px !important; width: 252px;}
-::ng-deep .mat-form-field-label-wrapper { top: -1.5em; }
+mat-icon {
+  opacity: 1;
+  color: #9d9d9d;
+}
+
+::ng-deep .mat-form-field-flex > .mat-form-field-infix {
+  padding: 0.4em 0px !important;
+  width: 252px;
+}
+::ng-deep .mat-form-field-label-wrapper {
+  top: -1.5em;
+}

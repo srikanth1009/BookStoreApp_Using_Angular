@@ -1,18 +1,20 @@
-<div class="body">
-  <mat-card class="example-card">
+<div id="body">
+  <mat-card class="example-card" >
+    <div>
     <img src="../../../assets/signup/womencart.png" class="image" />
     <h1 class="h1">Online Book Shopping</h1>
+    </div>
   </mat-card>
 
   <!-- //signup form -->
 
-  <mat-card class="example-card2">
+  <mat-card class="example-card2" >
       
-    <mat-tab-group>
-      <mat-tab  routerLink="/loginform"  label="Login"> Login 1</mat-tab>
-      <mat-tab  routerLink="/signupform"  class="signup" label="SignUp"> SignUp 2</mat-tab>
+    <mat-tab-group class="user" >
+      <mat-tab    label="LOGIN"> Login</mat-tab>
+      <mat-tab    class="signup" label="SIGNUP"> SignUp</mat-tab>
     </mat-tab-group>
-   
+
     <div class="fullname">
       <mat-form-field appearance="legacy">
         <mat-label>Full Name</mat-label>
@@ -20,7 +22,7 @@
         <mat-icon matSuffix></mat-icon>
       </mat-form-field>
     </div>
-    <br /><br />
+   
     <div class="emailId">
       <mat-form-field appearance="legacy">
         <mat-label>Email Id</mat-label>
@@ -28,15 +30,16 @@
         <!-- <mat-icon matSuffix></mat-icon> -->
       </mat-form-field>
     </div>
-    <br /><br />
+ 
     <div class="password">
       <mat-form-field appearance="legacy">
         <mat-label>Password</mat-label>
         <input matInput />
+        <!-- <i class="far fa-eye" id="togglePassword" style="margin-left: -30px; cursor: pointer;"></i> -->
         <!-- <mat-icon matSuffix></mat-icon> -->
       </mat-form-field>
     </div>
-    <br />
+   
     <div class="mobileNo">
       <mat-form-field appearance="legacy">
         <mat-label>Mobile No</mat-label>
@@ -45,7 +48,6 @@
       </mat-form-field>
     </div>
     <br>
-    <button class="loginbutton" style="color: white">Signup</button>
-
+    <button class="loginbutton" style="color: white" (click)="onSubmit()">Signup</button>
   </mat-card>
 </div>
