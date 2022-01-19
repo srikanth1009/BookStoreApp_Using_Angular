@@ -7,12 +7,12 @@
   </mat-card>
 
   <!-- //signup form -->
-
-  <mat-card class="example-card2"  routerLink="/signupform" >
+  <form (ngSubmit)="onSubmit()"*ngIf="!isloading">
+  <mat-card class="example-card2" >
       
-    <mat-tab-group class="user"  >
-      <mat-tab    label="LOGIN"> </mat-tab>
-      <mat-tab   class="signup" label="SIGNUP"> </mat-tab>
+    <mat-tab-group class="user" dynamicHeight="true"  >
+      <a routerLink="/loginform"></a> <mat-tab    label="LOGIN"></mat-tab>
+      <mat-tab   class="signup" label="SIGNUP"></mat-tab>
     </mat-tab-group>
 
     <div class="fullname">
@@ -26,9 +26,18 @@
     <div class="emailId">
       <mat-form-field appearance="legacy">
         <mat-label>Email Id</mat-label>
-        <input matInput />
-        <!-- <mat-icon matSuffix></mat-icon> -->
+        <input email reqired  matInput type="email" placeholder="Email" name="emailId"  />
+        <mat-icon matSuffix></mat-icon> 
+        <mat-error>Enter valid email</mat-error>
       </mat-form-field>
+
+      <!-- <mat-form-field appearance="outline" fxLayout="column" >
+        <mat-label>Enter your Email</mat-label>
+        <input email required matInput type="email" placeholder="Email"  name="emailId">
+        <mat-icon style="color: #e1e4e4;" matSuffix>email</mat-icon>
+        <mat-error>Please Enter valid email </mat-error>
+    </mat-form-field> -->
+
     </div>
  
     <div class="password">
@@ -50,4 +59,5 @@
     <br>
     <button class="loginbutton" style="color: white" (click)="onSubmit()">Signup</button>
   </mat-card>
+  </form>
 </div>

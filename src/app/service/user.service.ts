@@ -11,10 +11,9 @@ import { User } from '../model/user';
 export class UserService {
   baseUrl: string = environment.api_url;
 
-  constructor( private httpClient:HttpClient) { }
-
-  addUserDetails(user: User) :Observable<any> {
+  constructor(private http: HttpClient) {}
+  public register(user: any): Observable<any> {
     console.log(user);
-    return this.httpClient.post(this.baseUrl + "/register", user);
+    return this.http.post(this.baseUrl + "/register", user);
   }
 }

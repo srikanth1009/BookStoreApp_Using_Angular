@@ -9,30 +9,29 @@ import { UserService } from 'src/app/service/user.service';
   styleUrls: ['./signup.component.scss']
 })
 export class SignupComponent implements OnInit {
-  hide: boolean = true;
+  // hide: boolean = true;
   public error = null;
   public isloading = false;
   public form = { 
     // Id  : number,
-    fullName:"string",
-    emailId: "string",
-    password: "string",
-    mobileNo: "string",
+    fullName:null,
+    emailId: null,
+    password: null,
+    mobileNo: null,
   // user:any;
   };
    
  
 
-  constructor( private userService: UserService,   private router: Router,
-    private matSnakeBar: MatSnackBar) { }
+  constructor( private userService: UserService,   private router: Router,  private matSnakeBar: MatSnackBar) { }
   
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
   onSubmit() {
     this.isloading = true;
-          this.userService.addUserDetails(this.form).subscribe(data =>{
+          this.userService.register(this.form).subscribe(data =>{
             console.log("post",data);
             
           })
