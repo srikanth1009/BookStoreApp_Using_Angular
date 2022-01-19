@@ -6,19 +6,10 @@ height: 800px;
 background: grey 0% 0% no-repeat padding-box;
 opacity: 1;
 }
-.formcontent{
-    
-left: 727px;
-width: 252px;
-
-// background: #FFFFFF 0% 0% no-repeat padding-box;
-// border: 1px solid #FF001C;
-// border-radius: 2px;
-// opacity: 1;
-}
 
 .signup{
-top: 194px;
+tab-size: 70px;
+top: 100px;
 left: 700px;
 width: 89px;
 height: 33px;
@@ -30,10 +21,12 @@ text-transform: uppercase;
 opacity: 1;
 }
 .emailId{
+    margin-left: 50px;
+    margin-left: 50px;
     padding-left: 10px;
     top: 390px;
-// left: 727px;
-// width: 252px;
+left: 727px;
+width: 252px;
 height: 35px;
 background: #FFFFFF 0% 0% no-repeat padding-box;
 border: 1px solid #E2E2E2;
@@ -41,9 +34,10 @@ border-radius: 2px;
 opacity: 1;
 }
 .password{
+    margin-left: 50px;
     top: 396px;
-// left: 727px;
-// width: 252px;
+left: 727px;
+width: 252px;
 height: 35px;
 background: #FFFFFF 0% 0% no-repeat padding-box;
 border: 1px solid #E2E2E2;
@@ -52,9 +46,10 @@ opacity: 1;
 }
 
 .mobileNo{
+    margin-left: 50px;
 top: 459px;
-// left: 727px;
-// width: 252px;
+left: 727px;
+width: 252px;
 height: 35px;
 background: #FFFFFF 0% 0% no-repeat padding-box;
 border: 1px solid #E2E2E2;
@@ -63,10 +58,10 @@ opacity: 1;
 
 }
 .fullname{
-
+    margin-left: 50px;
     top: 270px;
-    // left: 727px;
-    // width: 252px;
+    left: 727px;
+    width: 252px;
     height: 35px;
     background: #FFFFFF 0% 0% no-repeat padding-box;
     border: 1px solid #FF001C;
@@ -125,12 +120,13 @@ opacity: 1;
 }
 ::ng-deep.mat-tab-label,
 ::ng-deep.mat-tab-label-active {
-    min-width: 0px !important;
-    padding: 0px !important;
+    min-width: 40px !important;
+    padding: 2px !important;
     margin: 40px !important;
 }
 
 .loginbutton {
+    margin-left: 50px;
     width: 270px;
     height: 37px;
     background: #a03037 0% 0% no-repeat padding-box;
@@ -171,7 +167,7 @@ h2 span {
     margin-top: -15px;
 }
 .signup{
-    margin-top:40px ;
+    margin-top:0px ;
 }
 mat-icon{
     opacity: 1;
