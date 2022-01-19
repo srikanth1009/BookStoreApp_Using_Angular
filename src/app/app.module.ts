@@ -5,7 +5,6 @@ import { AppComponent } from './app.component';
 import { SignupComponent } from './component/signup/signup.component';
 import { MaterialModule } from './material/material/material.module';
 import { LoginComponent } from './component/login/login.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './component/header/header.component';
