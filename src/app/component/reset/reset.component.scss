@@ -1,0 +1,102 @@
+.body{
+    top: 0px;
+    left: 0px;
+    width: 1260px;
+    height: 400px;
+    background:0% 0% no-repeat padding-box;
+    opacity: 1;
+    }
+.header_reset{
+    margin-top: 100px;
+}
+.header_reset h2{
+    text-align: center;
+}
+
+    .formcontent{
+        
+    left: 727px;
+    width: 252px;
+    
+    // background: #FFFFFF 0% 0% no-repeat padding-box;
+    // border: 1px solid #FF001C;
+    // border-radius: 2px;
+    // opacity: 1;
+    }
+    
+   
+    .new.form_container{
+        padding-left: 10px;
+        top: 390px;
+        margin-top: 400px;
+        // padding-top: 20px;
+    // left: 727px;
+    // width: 252px;
+    height: 35px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #E2E2E2;
+    border-radius: 2px;
+    opacity: 1;
+    }
+    .form_container{
+        padding-left: 10px;
+        top: 390px;
+        margin-top: 450px;
+    }
+    
+  
+    
+   
+    .example-card2 {
+    // top: 100px;
+    left: 500px;
+    width: 300px;
+    height: 250px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 5px 15px #00000029;
+    border: 1px solid #E4E4E4;
+    border-radius: 6px;
+    opacity: 1;
+    }
+    
+    
+    ::ng-deep .mat-tab-header {
+        border-bottom: none;
+    }
+    ::ng-deep .mat-ink-bar {
+        background-color: black !important;
+        bottom: 50px !important;
+    }
+    ::ng-deep.mat-tab-label,
+    ::ng-deep.mat-tab-label-active {
+        min-width: 0px !important;
+        padding: 0px !important;
+        margin: 40px !important;
+    }
+    
+    .resetbutton {
+        width: 270px;
+        height: 37px;
+        background: #a03037 0% 0% no-repeat padding-box;
+        border-radius: 1px;
+        opacity: 1;
+        border: none;
+       
+    }
+    
+  
+    ::ng-deep .mat-tab-header-pagination {
+        display: none !important;
+    }
+    
+   
+
+   
+   
+    mat-icon{
+        opacity: 1;
+        color:  #9D9D9D;
+    }
+    
+    ::ng-deep .mat-form-field-flex > .mat-form-field-infix { padding: 0.4em 0px !important; width: 252px;}
+    ::ng-deep .mat-form-field-label-wrapper { top: -1.5em; }
