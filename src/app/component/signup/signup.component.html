@@ -1,63 +1,65 @@
 <div id="body">
-  <mat-card class="example-card" >
+  <mat-card class="example-card">
     <div>
-    <img src="../../../assets/signup/womencart.png" class="image" />
-    <h1 class="h1">Online Book Shopping</h1>
+      <img src="../../../assets/signup/womencart.png" class="image" />
+      <h1 class="h1">Online Book Shopping</h1>
     </div>
   </mat-card>
-
+  
   <!-- //signup form -->
-  <form (ngSubmit)="onSubmit()"*ngIf="!isloading">
-  <mat-card class="example-card2" >
+  <mat-card class="example-card2">
+    <mat-tab-group class="user" dynamicHeight="true">
+      <a routerLink="/loginform"></a> <mat-tab label="LOGIN"></mat-tab>
+      <mat-tab class="signup" label="SIGNUP"></mat-tab>
       
-    <mat-tab-group class="user" dynamicHeight="true"  >
-      <a routerLink="/loginform"></a> <mat-tab    label="LOGIN"></mat-tab>
-      <mat-tab   class="signup" label="SIGNUP"></mat-tab>
     </mat-tab-group>
+    <form class="form" [formGroup]="signupForm" (ngSubmit)="PostData(signupForm)">
 
     <div class="fullname">
       <mat-form-field appearance="legacy">
         <mat-label>Full Name</mat-label>
-        <input matInput />
+        <input matInput  formControlName="fullName"/>
         <mat-icon matSuffix></mat-icon>
       </mat-form-field>
     </div>
-   
+
     <div class="emailId">
       <mat-form-field appearance="legacy">
         <mat-label>Email Id</mat-label>
-        <input email reqired  matInput type="email" placeholder="Email" name="emailId"  />
-        <mat-icon matSuffix></mat-icon> 
+        <input
+          email
+          reqired
+          matInput
+          type="email"
+          placeholder="Email"
+          name="emailId" formControlName="emailId"
+        />
+        <mat-icon matSuffix></mat-icon>
         <mat-error>Enter valid email</mat-error>
       </mat-form-field>
-
-      <!-- <mat-form-field appearance="outline" fxLayout="column" >
-        <mat-label>Enter your Email</mat-label>
-        <input email required matInput type="email" placeholder="Email"  name="emailId">
-        <mat-icon style="color: #e1e4e4;" matSuffix>email</mat-icon>
-        <mat-error>Please Enter valid email </mat-error>
-    </mat-form-field> -->
-
     </div>
- 
     <div class="password">
       <mat-form-field appearance="legacy">
         <mat-label>Password</mat-label>
-        <input matInput />
-        <!-- <i class="far fa-eye" id="togglePassword" style="margin-left: -30px; cursor: pointer;"></i> -->
-        <!-- <mat-icon matSuffix></mat-icon> -->
-      </mat-form-field>
-    </div>
-   
-    <div class="mobileNo">
-      <mat-form-field appearance="legacy">
-        <mat-label>Mobile No</mat-label>
-        <input matInput />
+        <input matInput formControlName="password" />
+
         <mat-icon matSuffix></mat-icon>
       </mat-form-field>
     </div>
-    <br>
-    <button class="loginbutton" style="color: white" (click)="onSubmit()">Signup</button>
+
+    <div class="mobileNo">
+      <mat-form-field appearance="legacy">
+        <mat-label>Mobile No</mat-label>
+        <input matInput formControlName="mobileNo"/>
+        <mat-icon matSuffix></mat-icon>
+      </mat-form-field>
+    </div>
+    <br />
+    <button class="loginbutton" style="color: white" (click)="addNewContact()">
+      Signup
+    </button>
+    </form>
   </mat-card>
-  </form>
+
+
 </div>

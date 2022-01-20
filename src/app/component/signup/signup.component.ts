@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormControl } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { UserService } from 'src/app/service/user.service';
@@ -9,35 +10,39 @@ import { UserService } from 'src/app/service/user.service';
   styleUrls: ['./signup.component.scss']
 })
 export class SignupComponent implements OnInit {
-  // hide: boolean = true;
-  public error = null;
-  public isloading = false;
-  public form = { 
+  [x: string]: any;
+  hide: boolean = true;
     // Id  : number,
-    fullName:null,
-    emailId: null,
-    password: null,
-    mobileNo: null,
+    fullName:string ='';
+    emailId: string ='';
+    password: string = '';
+    mobileNo: string  = '';
   // user:any;
-  };
-   
- 
+  signupForm:any;
+  constructor(  private formBuilder: FormBuilder, private userService: UserService,   private router: Router,  private matSnakeBar: MatSnackBar) {
+    this.signupForm = formBuilder.group({
+      fullName: new FormControl(),
+      emailId: new FormControl(),
+      password: new FormControl(),
+      mobileNo: new FormControl(),
+    });
+   }
+   ngOnInit(): void {}
+   PostData(signupForm: any) {
+     console.log(signupForm.controls);
+   }
 
-  constructor( private userService: UserService,   private router: Router,  private matSnakeBar: MatSnackBar) { }
-  
-
-  ngOnInit() {
-  }
-
-  onSubmit() {
-    this.isloading = true;
-          this.userService.register(this.form).subscribe(data =>{
-            console.log("post",data);
-            
-          })
-          this.router.navigateByUrl("/loginform");
-   
-  
+   addNewContact() {
+    const newformData = {
+      fullName: this.signupForm.controls.fullName.value,
+      emailId: this.signupForm.controls.emailId.value,
+      password: this.signupForm.controls.password.value,
+      mobileNo: this.signupForm.controls.mobileNo.value,
+     
+    };
+    this.userService.createContact(newformData).subscribe((data: any) =>
+      console.log((data))
+    );
+    this.router.navigateByUrl("/loginform");
 }
 }
-
