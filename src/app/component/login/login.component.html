@@ -29,9 +29,10 @@
       <div class="password">
         <mat-form-field appearance="legacy">
           <mat-label>Password</mat-label>
-          <input matInput  formControlName="password"/>
+          <input matInput  formControlName="password" [type]="hide ? 'password' : 'text'"/>
           <mat-icon matSuffix></mat-icon>
         </mat-form-field>
+        <a class="forgot">forgot password?</a>
       </div>
       <br /><br />
       

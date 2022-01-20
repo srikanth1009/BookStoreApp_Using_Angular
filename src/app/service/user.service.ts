@@ -13,7 +13,7 @@ export class UserService {
 
   constructor(private http: HttpClient) {
 
-  }
+  }//method Sign up
   createContact(reourceBody: {
     fullName: string;
     emailId: string;
