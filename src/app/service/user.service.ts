@@ -22,7 +22,15 @@ export class UserService {
     
   }) {
 
-    return this.http.post(this.baseUrl + "/register", reourceBody);  }
+    return this.http.post(this.baseUrl + "/register", reourceBody); 
+   }
 
+
+    userlogin(login : {
+     emailId: string;
+    password: string;
+    }){
+      return this.http.post(this.baseUrl + "/userlogin", login )
+    }
   }
    
