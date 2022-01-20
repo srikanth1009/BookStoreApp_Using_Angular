@@ -13,11 +13,15 @@
          <a routerLink="/signupform"></a> <mat-tab class="signup" label="SIGNIUP"></mat-tab>
       </mat-tab-group>
      
-     
+      <form
+      class="form"
+      [formGroup]="signupForm"
+      (ngSubmit)="PostData(signupForm)"
+    >
       <div class="emailId">
         <mat-form-field appearance="legacy">
           <mat-label>Email Id</mat-label>
-          <input matInput />
+          <input matInput formControlName="emailId" />
           <mat-icon matSuffix></mat-icon>
         </mat-form-field>
       </div>
@@ -25,19 +29,20 @@
       <div class="password">
         <mat-form-field appearance="legacy">
           <mat-label>Password</mat-label>
-          <input matInput />
+          <input matInput  formControlName="password"/>
           <mat-icon matSuffix></mat-icon>
         </mat-form-field>
       </div>
       <br /><br />
       
       <!-- <div> -->
-      <button class="loginbutton" style="color: white" >Login</button><br>
+      <button class="loginbutton" style="color: white" (click)="addLogin()" >Login</button><br>
       <h3>OR</h3><br>
       <button class="facebookbutton" style="color: white">Facbook</button>
       <button class="googlebutton" style="color: black">Google</button>
     <!-- </div> -->
-  
+      </form>
     </mat-card>
+    
   </div>
   

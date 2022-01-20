@@ -8,8 +8,8 @@ import { SignupComponent } from './component/signup/signup.component';
 const routes: Routes = [
 
   {path:'', component:SignupComponent},
-  {path:'signupform', component:SignupComponent},
   {path:'loginform', component:LoginComponent},
+  {path:'signupform', component:SignupComponent},
   {path:'reset', component:ResetComponent}
 
 ];
