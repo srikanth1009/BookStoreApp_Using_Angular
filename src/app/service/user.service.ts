@@ -25,5 +25,4 @@ export class UserService {
     return this.http.post(this.baseUrl + "/register", reourceBody);  }
 
   }
-
-
+   
