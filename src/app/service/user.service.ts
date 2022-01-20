@@ -11,9 +11,19 @@ import { User } from '../model/user';
 export class UserService {
   baseUrl: string = environment.api_url;
 
-  constructor(private http: HttpClient) {}
-  public register(user: any): Observable<any> {
-    console.log(user);
-    return this.http.post(this.baseUrl + "/register", user);
+  constructor(private http: HttpClient) {
+
   }
-}
+  createContact(reourceBody: {
+    fullName: string;
+    emailId: string;
+    password: string;
+    mobileNo: string;
+    
+  }) {
+
+    return this.http.post(this.baseUrl + "/register", reourceBody);  }
+
+  }
+
+

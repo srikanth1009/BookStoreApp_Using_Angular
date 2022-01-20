@@ -18,23 +18,23 @@
     left: 727px;
     width: 252px;
     
-    // background: #FFFFFF 0% 0% no-repeat padding-box;
-    // border: 1px solid #FF001C;
-    // border-radius: 2px;
-    // opacity: 1;
+    
     }
     
-   
-    .new.form_container{
+//    .new .password{
+//         background: #ffffff 0% 0% no-repeat padding-box;
+//       border: 1px solid #e2e2e2;
+//       border-radius: 2px;
+//       opacity: 1;
+//    }
+    .form_container{
         padding-left: 10px;
         top: 390px;
         margin-top: 400px;
-        // padding-top: 20px;
-    // left: 727px;
-    // width: 252px;
+       
     height: 35px;
     background: #FFFFFF 0% 0% no-repeat padding-box;
-    border: 1px solid #E2E2E2;
+    // border: 1px solid #E2E2E2;
     border-radius: 2px;
     opacity: 1;
     }
@@ -60,19 +60,7 @@
     }
     
     
-    ::ng-deep .mat-tab-header {
-        border-bottom: none;
-    }
-    ::ng-deep .mat-ink-bar {
-        background-color: black !important;
-        bottom: 50px !important;
-    }
-    ::ng-deep.mat-tab-label,
-    ::ng-deep.mat-tab-label-active {
-        min-width: 0px !important;
-        padding: 0px !important;
-        margin: 40px !important;
-    }
+   
     
     .resetbutton {
         width: 270px;
@@ -83,17 +71,19 @@
         border: none;
        
     }
-    
+   ::ng-deep .mat-form-field-infix{
+    display: block;
+    position: relative;
+    flex: auto;
+    min-width: 0;
+    border: solid #E2E2E2 1px;
+    }
   
     ::ng-deep .mat-tab-header-pagination {
         display: none !important;
     }
     
-   
-
-   
-   
-    mat-icon{
+   mat-icon{
         opacity: 1;
         color:  #9D9D9D;
     }
