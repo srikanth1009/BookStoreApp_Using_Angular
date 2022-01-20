@@ -25,7 +25,7 @@ export class UserService {
     return this.http.post(this.baseUrl + "/register", reourceBody); 
    }
 
-
+//Method for Login  
     userlogin(login : {
      emailId: string;
     password: string;
