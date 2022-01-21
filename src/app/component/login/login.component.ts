@@ -11,6 +11,7 @@ import { UserService } from 'src/app/service/user.service';
 })
 export class LoginComponent implements OnInit {
  //Method for login
+ 
   [x: string]: any;
   hide: boolean = true;
     // Id  : number,
