@@ -1,34 +1,23 @@
 <app-header></app-header>
-<div class="body">
-   <!-- //reset form -->
-   <div class="header_reset">
-   <h2>Reset Password</h2>
+<div class="container-center">
+    <h1 class="head">Reset your password</h1>
+    <div class="dashbord">
+        <h3 class="subtitle">Please enter your new password
+        </h3>
+        <br />
+        <form #resetForm="ngForm" (ngSubmit)="resetUserPassword()">
+            <label class="name">New Password</label>
+            <input class="input-reset" type="password" matInput="emailFormControl" placeholder="New Password"
+                name="newPassword">
+
+            <label class="name">Confirm Password</label>
+            <input class="input-reset" type="password" matInput="emailFormControl" placeholder="Confirm Password"
+                name="confirmPassword" [(ngModel)]="resetPassword.confirmPassword">
+            <button class="reset" type="submit">Reset Your
+
+                Password</button>
+        </form>
     </div>
-    <form  (ngSubmit)="savePassword()">
-    <mat-card class="example-card2">
-       
-        <div class="form_container"><br><br>
-        <div class="new">
-        <mat-form-field appearance="legacy">
-          <mat-label>New Password</mat-label>
-          <input matInput formControlName="newPassword" />
-          <mat-icon matSuffix></mat-icon>
-        </mat-form-field>
-      </div>
-      <br /><br />
-      <div class="password">
-        <mat-form-field appearance="legacy">
-          <mat-label>Conform Password</mat-label>
-          <input matInput  formControlName="confirmPassword"/>
-          <mat-icon matSuffix></mat-icon>
-        </mat-form-field>
-      </div>
-     
-      <br /><br />
-      <button class="resetbutton" style="color: white" type="button" (click)="savePassword()">Reset</button><br>
-    </div>
-    </mat-card>
-    
-  </form>
+   
     
   </div>

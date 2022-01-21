@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { ResetPassword } from 'src/app/model/reset-password';
 import { UserService } from 'src/app/service/user.service';
 
 @Component({
@@ -10,33 +11,23 @@ import { UserService } from 'src/app/service/user.service';
 export class ResetComponent implements OnInit {
   public isloading = false;
 
-  constructor( private router : Router,
-              private userservice :UserService) { }
+  token!: string;
+  resetPassword: ResetPassword = new ResetPassword();
+
+
+  constructor(private route:ActivatedRoute, private service: UserService) { }
 
   ngOnInit(): void {
+
+    this.token= this.route.snapshot.params['token'];
+    console.log(this.token);
+    console.log(this.resetPassword);
   }
-  
-  newPassword!:string;
-  confirmPassword!:string; 
-  token!:string;
-  savePassword(){
-    this.isloading = true;
-    this.userservice.reset(this.newPassword).subscribe(data =>{
-      console.log(data);
-      this.onReset();
-    },
-  //   error=>{
-  //     console.log(error)
-  //  }
-  )
-  }
-  // checkPassword(){
-  //   if(this.newPassword == this.confirmPassword){
-  //     return this.newPassword
-  //   }
-  //   return "password miss match"
-  // }
-  onReset(){
-    this.router.navigate(['/loginform']);
+
+  resetUserPassword(){
+    this.service.resetUserPassword(this.token, this.resetPassword).subscribe(
+        data=>{console.log(data) },
+        error=>{ console.log(error)}
+    );
   }
 }
