@@ -4,13 +4,14 @@
    <div class="header_reset">
    <h2>Reset Password</h2>
     </div>
+    <form  (ngSubmit)="savePassword()">
     <mat-card class="example-card2">
        
         <div class="form_container"><br><br>
         <div class="new">
         <mat-form-field appearance="legacy">
           <mat-label>New Password</mat-label>
-          <input matInput />
+          <input matInput formControlName="newPassword" />
           <mat-icon matSuffix></mat-icon>
         </mat-form-field>
       </div>
@@ -18,13 +19,16 @@
       <div class="password">
         <mat-form-field appearance="legacy">
           <mat-label>Conform Password</mat-label>
-          <input matInput />
+          <input matInput  formControlName="confirmPassword"/>
           <mat-icon matSuffix></mat-icon>
         </mat-form-field>
       </div>
+     
       <br /><br />
-      <button class="resetbutton" style="color: white" type="button" (click)="onReset()">Reset</button><br>
+      <button class="resetbutton" style="color: white" type="button" (click)="savePassword()">Reset</button><br>
     </div>
     </mat-card>
+    
+  </form>
     
   </div>

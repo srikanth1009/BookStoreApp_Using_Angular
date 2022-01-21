@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { User } from '../model/user';
+
 
 
 @Injectable({
@@ -15,5 +15,8 @@ export class UserService {
   public register(user: any): Observable<any> {
     console.log(user);
     return this.http.post(this.baseUrl + "/register", user);
+  }
+  public reset(token:string){
+    return this.http.post(this.baseUrl +"/resetpassword",token);
   }
 }

@@ -10,4 +10,7 @@ export interface User{
     // city: string;
     // state: string;
     // type: string;
+    newPassword:string;
+    confirmPasword:string;
+    token:string;
 }
