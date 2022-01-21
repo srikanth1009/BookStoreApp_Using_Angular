@@ -10,8 +10,9 @@ import { UserService } from 'src/app/service/user.service';
   styleUrls: ['./signup.component.scss']
 })
 export class SignupComponent implements OnInit {
+  public showPassword: boolean = false;
   [x: string]: any;
-  hide: boolean = true;
+  hide = true;
     // Id  : number,
     fullName:string ='';
     emailId: string ='';
@@ -44,5 +45,8 @@ export class SignupComponent implements OnInit {
       console.log((data))
     );
     this.router.navigateByUrl("/loginform");
+}
+public togglePasswordVisibility(): void {
+  this.showPassword = !this.showPassword;
 }
 }

@@ -12,7 +12,7 @@
       <a routerLink="/loginform"></a> <mat-tab label="LOGIN"></mat-tab>
       <mat-tab class="signup" label="SIGNUP"></mat-tab>
     </mat-tab-group>
-    <form
+    <form 
       class="form"
       [formGroup]="signupForm"
       (ngSubmit)="PostData(signupForm)"
@@ -46,11 +46,12 @@
           <mat-label>Password</mat-label>
           <input
             matInput
-            formControlName="password"
-            [type]="hide ? 'password' : 'text'"
-          />
-          <mat-icon matSuffix></mat-icon>
-          <!-- <mat-hint *ngIf="!password.value">Enter your password</mat-hint> -->
+            formControlName="password" type="password" />
+     
+            <mat-icon matSuffix > </mat-icon>
+          <!-- <mat-hint *ngIf="!password.value">Enter your password</mat-hint> 
+          [type]="showPassword ? 'text' : 'password'" name="password"
+        (click)="togglePasswordVisibility()">  {{showPassword?'visibility_off':'visibility'}}-->
         </mat-form-field>
       </div>
 
