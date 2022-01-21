@@ -10,6 +10,7 @@ import { environment } from 'src/environments/environment';
 })
 export class UserService {
   baseUrl: string = environment.api_url;
+  resetUserPassword: any;
 
   constructor(private http: HttpClient) {
 

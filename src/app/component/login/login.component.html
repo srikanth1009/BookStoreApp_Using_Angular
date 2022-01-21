@@ -9,7 +9,7 @@
     <mat-card class="example-card2">  
         
       <mat-tab-group  >
-         <mat-tab label="LOGIN"></mat-tab>
+         <mat-tab class="login" label="LOGIN"></mat-tab>
         <mat-tab class="signup" label="SIGNIUP"><a routerLink="/signupform"></a></mat-tab>
       </mat-tab-group>
      
@@ -32,7 +32,7 @@
           <input matInput  formControlName="password" [type]="hide ? 'password' : 'text'"/>
           <mat-icon matSuffix></mat-icon>
         </mat-form-field>
-        <a class="forgot">forgot password?</a>
+        <a class="forgot" href="forgot">forgot password?</a>
       </div>
       <br /><br />
       
