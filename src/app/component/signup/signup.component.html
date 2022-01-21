@@ -8,10 +8,12 @@
 
   <!-- //signup form -->
   <mat-card class="example-card2">
+    <div>
     <mat-tab-group class="user" dynamicHeight="true">
-      <a routerLink="/loginform"></a> <mat-tab label="LOGIN"></mat-tab>
-      <mat-tab class="signup" label="SIGNUP"></mat-tab>
+     <mat-tab label="LOGIN"></mat-tab>
+      <mat-tab class="signup" label="SIGNUP" routerLink="loginform"></mat-tab>
     </mat-tab-group>
+  </div>
     <form
       class="form"
       [formGroup]="signupForm"
@@ -44,13 +46,12 @@
       <div class="password">
         <mat-form-field appearance="legacy">
           <mat-label>Password</mat-label>
-          <input
-            matInput
-            formControlName="password"
-            [type]="hide ? 'password' : 'text'"
-          />
-          <mat-icon matSuffix></mat-icon>
-          <!-- <mat-hint *ngIf="!password.value">Enter your password</mat-hint> -->
+          <input matInput formControlName="password" type="password" />
+
+          <mat-icon matSuffix> </mat-icon>
+          <!-- <mat-hint *ngIf="!password.value">Enter your password</mat-hint> 
+          [type]="showPassword ? 'text' : 'password'" name="password"
+        (click)="togglePasswordVisibility()">  {{showPassword?'visibility_off':'visibility'}}-->
         </mat-form-field>
       </div>
 
