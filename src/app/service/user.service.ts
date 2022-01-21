@@ -11,11 +11,28 @@ import { environment } from 'src/environments/environment';
 export class UserService {
   baseUrl: string = environment.api_url;
 
-  constructor(private http: HttpClient) {}
-  public register(user: any): Observable<any> {
-    console.log(user);
-    return this.http.post(this.baseUrl + "/register", user);
-  }
+  constructor(private http: HttpClient) {
+
+  }//method Sign up
+  createContact(reourceBody: {
+    fullName: string;
+    emailId: string;
+    password: string;
+    mobileNo: string;
+    
+  }) {
+
+    return this.http.post(this.baseUrl + "/register", reourceBody); 
+   }
+
+//Method for Login  
+    userlogin(login : {
+     emailId: string;
+    password: string;
+    }){
+      return this.http.post(this.baseUrl + "/userlogin", login )
+    }
+  
   public reset(token:string){
     return this.http.post(this.baseUrl +"/resetpassword",token);
   }

@@ -8,16 +8,20 @@
   
     <mat-card class="example-card2">  
         
-      <mat-tab-group >
-         <mat-tab label="LOGIN"> </mat-tab>
-         <a routerLink="/signupform"></a> <mat-tab class="signup" label="SIGNIUP"></mat-tab>
+      <mat-tab-group  >
+         <mat-tab label="LOGIN"></mat-tab>
+        <mat-tab class="signup" label="SIGNIUP"><a routerLink="/signupform"></a></mat-tab>
       </mat-tab-group>
      
-     
+      <form
+      class="form"
+      [formGroup]="signupForm"
+      (ngSubmit)="PostData(signupForm)"
+    >
       <div class="emailId">
         <mat-form-field appearance="legacy">
           <mat-label>Email Id</mat-label>
-          <input matInput />
+          <input matInput formControlName="emailId" />
           <mat-icon matSuffix></mat-icon>
         </mat-form-field>
       </div>
@@ -25,19 +29,21 @@
       <div class="password">
         <mat-form-field appearance="legacy">
           <mat-label>Password</mat-label>
-          <input matInput />
+          <input matInput  formControlName="password" [type]="hide ? 'password' : 'text'"/>
           <mat-icon matSuffix></mat-icon>
         </mat-form-field>
+        <a class="forgot">forgot password?</a>
       </div>
       <br /><br />
       
       <!-- <div> -->
-      <button class="loginbutton" style="color: white" >Login</button><br>
+      <button class="loginbutton" style="color: white" (click)="addLogin()" >Login</button><br>
       <h3>OR</h3><br>
       <button class="facebookbutton" style="color: white">Facbook</button>
       <button class="googlebutton" style="color: black">Google</button>
     <!-- </div> -->
-  
+      </form>
     </mat-card>
+    
   </div>
   
