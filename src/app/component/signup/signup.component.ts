@@ -10,6 +10,13 @@ import { UserService } from 'src/app/service/user.service';
   styleUrls: ['./signup.component.scss']
 })
 export class SignupComponent implements OnInit {
+  passFormControl = new FormControl('', [
+    Validators.required,
+     ]);
+     
+     confirmFormControl = new FormControl('', [
+      Validators.required,
+    ]);
   // public showPassword: boolean = false;
   showDetails: boolean | undefined;
   [x: string]: any;

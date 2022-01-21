@@ -12,7 +12,8 @@ const routes: Routes = [
   {path:'loginform', component:LoginComponent},
   {path:'signupform', component:SignupComponent},
   { path: 'reset/:token', component: ResetComponent},
-  { path: '' , redirectTo: 'loginform', pathMatch: 'full'},
+  // { path: '' , redirectTo: 'loginform', pathMatch: 'full'},
+  { path: '' , redirectTo: 'signupform', pathMatch: 'full'},
   {path:'forgot', component:ForgotPasswordComponent}
 
 ];

@@ -22,7 +22,7 @@
                 <mat-icon matSuffix></mat-icon>
               </mat-form-field>
             </div>
-            <br /><br />
+           
             <div class="password">
               <mat-form-field appearance="legacy">
                 <mat-label>Password</mat-label>
@@ -31,11 +31,11 @@
               </mat-form-field>
               <a class="forgot" href="forgot">forgot password?</a>
             </div>
-            <br /><br />
+            <br>
 
             <!-- <div> -->
             <button class="loginbutton" style="color: white" (click)="addLogin()">Login</button><br>
-            <h3>OR</h3><br>
+            <h3>OR</h3>
             <button class="facebookbutton" style="color: white">Facbook</button>
             <button class="googlebutton" style="color: black">Google</button>
             <!-- </div> -->
@@ -48,7 +48,7 @@
             <div class="fullname">
               <mat-form-field appearance="legacy">
                 <mat-label>Full Name</mat-label>
-                <input fullname required matInput formControlName="fullName" type="text" name="fullname" />
+                <input fullname  matInput formControlName="fullName" type="text" name="fullname" />
                 <mat-icon matSuffix></mat-icon>
               </mat-form-field>
             </div>
@@ -56,7 +56,7 @@
             <div class="emailId">
               <mat-form-field appearance="legacy">
                 <mat-label>Email Id</mat-label>
-                <input email reqired matInput type="email" placeholder="Email" name="emailId"
+                <input email  matInput type="email" placeholder="Email" name="emailId"
                   formControlName="emailId" />
                 <mat-icon matSuffix></mat-icon>
                 <mat-error>Enter valid email</mat-error>
@@ -67,7 +67,9 @@
               <mat-form-field appearance="legacy">
                 <mat-label>Password</mat-label>
                 <input matInput formControlName="password" placeholder="Password" [type]="hide ? 'password' : 'text'" />
-                <mat-icon matSuffix></mat-icon>
+                <!-- <span *ngIf="!password.valid && password.touched" class="label-text error">Password should be in Proper Format!!</span> -->
+                <mat-icon matSuffix ></mat-icon>
+              
               </mat-form-field>
             </div>
 
@@ -79,7 +81,7 @@
               </mat-form-field>
             </div>
             <br />
-            <button class="loginbutton" style="color: white" (click)="addNewContact()">
+            <button class="signupbutton" style="color: white" (click)="addNewContact()">
               Signup
             </button>
           </form>
