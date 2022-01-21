@@ -8,7 +8,7 @@
         <form #resetForm="ngForm" (ngSubmit)="resetUserPassword()">
             <label class="name">New Password</label>
             <input class="input-reset" type="password" matInput="emailFormControl" placeholder="New Password"
-                name="newPassword">
+            [(ngModel)]="resetPassword.newPassword" name="newPassword">
 
             <label class="name">Confirm Password</label>
             <input class="input-reset" type="password" matInput="emailFormControl" placeholder="Confirm Password"

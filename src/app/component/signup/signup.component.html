@@ -8,68 +8,88 @@
 
   <!-- //signup form -->
   <mat-card class="example-card2">
+
     <div>
-    <mat-tab-group class="user" dynamicHeight="true">
-     <mat-tab label="LOGIN"></mat-tab>
-      <mat-tab class="signup" label="SIGNUP" routerLink="loginform"></mat-tab>
-    </mat-tab-group>
-  </div>
-    <form
-      class="form"
-      [formGroup]="signupForm"
-      (ngSubmit)="PostData(signupForm)"
-    >
-      <div class="fullname">
-        <mat-form-field appearance="legacy">
-          <mat-label>Full Name</mat-label>
-          <input matInput formControlName="fullName" />
-          <mat-icon matSuffix></mat-icon>
-        </mat-form-field>
-      </div>
 
-      <div class="emailId">
-        <mat-form-field appearance="legacy">
-          <mat-label>Email Id</mat-label>
-          <input
-            email
-            reqired
-            matInput
-            type="email"
-            placeholder="Email"
-            name="emailId"
-            formControlName="emailId"
-          />
-          <mat-icon matSuffix></mat-icon>
-          <mat-error>Enter valid email</mat-error>
-        </mat-form-field>
-      </div>
-      <div class="password">
-        <mat-form-field appearance="legacy">
-          <mat-label>Password</mat-label>
-          <input matInput formControlName="password" type="password" />
+      <mat-tab-group class="user" dynamicHeight="true">
 
-          <mat-icon matSuffix> </mat-icon>
-          <!-- <mat-hint *ngIf="!password.value">Enter your password</mat-hint> 
-          [type]="showPassword ? 'text' : 'password'" name="password"
-        (click)="togglePasswordVisibility()">  {{showPassword?'visibility_off':'visibility'}}-->
-        </mat-form-field>
-      </div>
+        <mat-tab label="LOGIN" class="login" routerLink="/loginform">
+          <form class="form" [formGroup]="signupForm" (ngSubmit)="PostData(signupForm)">
+            <div class="emailId">
+              <mat-form-field appearance="legacy">
+                <mat-label>Email Id</mat-label>
+                <input matInput formControlName="emailId" />
+                <mat-icon matSuffix></mat-icon>
+              </mat-form-field>
+            </div>
+            <br /><br />
+            <div class="password">
+              <mat-form-field appearance="legacy">
+                <mat-label>Password</mat-label>
+                <input matInput formControlName="password" [type]="hide ? 'password' : 'text'" />
+                <mat-icon matSuffix></mat-icon>
+              </mat-form-field>
+              <a class="forgot" href="forgot">forgot password?</a>
+            </div>
+            <br /><br />
 
-      <div class="mobileNo">
-        <mat-form-field appearance="legacy">
-          <mat-label>Mobile No</mat-label>
-          <input matInput formControlName="mobileNo" />
-          <mat-icon matSuffix></mat-icon>
-        </mat-form-field>
-      </div>
-      <br />
-      <button
-        class="loginbutton"
-        style="color: white"
-        (click)="addNewContact()"
-      >
-        Signup
-      </button>
-    </form>
+            <!-- <div> -->
+            <button class="loginbutton" style="color: white" (click)="addLogin()">Login</button><br>
+            <h3>OR</h3><br>
+            <button class="facebookbutton" style="color: white">Facbook</button>
+            <button class="googlebutton" style="color: black">Google</button>
+            <!-- </div> -->
+          </form>
+        </mat-tab>
+
+        <mat-tab class="signup" label="SIGNUP">
+          <form class="form" [formGroup]="signupForm" (ngSubmit)="PostData(signupForm)"><br>
+
+            <div class="fullname">
+              <mat-form-field appearance="legacy">
+                <mat-label>Full Name</mat-label>
+                <input fullname required matInput formControlName="fullName" type="text" name="fullname" />
+                <mat-icon matSuffix></mat-icon>
+              </mat-form-field>
+            </div>
+
+            <div class="emailId">
+              <mat-form-field appearance="legacy">
+                <mat-label>Email Id</mat-label>
+                <input email reqired matInput type="email" placeholder="Email" name="emailId"
+                  formControlName="emailId" />
+                <mat-icon matSuffix></mat-icon>
+                <mat-error>Enter valid email</mat-error>
+              </mat-form-field>
+            </div>
+
+            <div class="password">
+              <mat-form-field appearance="legacy">
+                <mat-label>Password</mat-label>
+                <input matInput formControlName="password" placeholder="Password" [type]="hide ? 'password' : 'text'" />
+                <mat-icon matSuffix></mat-icon>
+              </mat-form-field>
+            </div>
+
+            <div class="mobileNo">
+              <mat-form-field appearance="legacy">
+                <mat-label>Mobile No</mat-label>
+                <input matInput formControlName="mobileNo" />
+                <mat-icon matSuffix></mat-icon>
+              </mat-form-field>
+            </div>
+            <br />
+            <button class="loginbutton" style="color: white" (click)="addNewContact()">
+              Signup
+            </button>
+          </form>
+
+        </mat-tab>
+
+      </mat-tab-group>
+
+    </div>
+
   </mat-card>
+
 </div>
