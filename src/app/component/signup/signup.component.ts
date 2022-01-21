@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { UserService } from 'src/app/service/user.service';
@@ -10,7 +10,15 @@ import { UserService } from 'src/app/service/user.service';
   styleUrls: ['./signup.component.scss']
 })
 export class SignupComponent implements OnInit {
-  public showPassword: boolean = false;
+  passFormControl = new FormControl('', [
+    Validators.required,
+     ]);
+     
+     confirmFormControl = new FormControl('', [
+      Validators.required,
+    ]);
+  // public showPassword: boolean = false;
+  showDetails: boolean | undefined;
   [x: string]: any;
   hide = true;
     // Id  : number,
@@ -46,7 +54,22 @@ export class SignupComponent implements OnInit {
     );
     this.router.navigateByUrl("/loginform");
 }
-public togglePasswordVisibility(): void {
-  this.showPassword = !this.showPassword;
+// public togglePasswordVisibility(): void {
+//   this.showPassword = !this.showPassword;
+// }
+onStrengthChanged(strength: number) {
+  console.log('password strength = ', strength);
+}
+addLogin() {
+  const newformData = {
+   
+    emailId: this.signupForm.controls.emailId.value,
+    password: this.signupForm.controls.password.value,
+   
+   
+  };
+  this.userService.userlogin(newformData).subscribe((data: any) =>
+    console.log((data))
+  );
 }
 }
