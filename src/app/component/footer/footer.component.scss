@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    // border: 1px solid green;
+    top: 1166px;
+    left: 0px;
+    width: 1255px;
+    height: 45px;
+    background: #2E1D1E 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+
+
+.text {
+    font: normal normal bold 20px/25px Montserrat;
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 0em;
+    color:#FFFFFF;
+    text-transform: capitalize;
+    margin: 0;
+    box-sizing: border-box;
+    top: 17px;
+    left: 201px;
+    width: 91px;
+    height: 26px;
+    text-align: left;
+    font: normal normal normal 20px/26px Roboto;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    font-size: medium;
+    text-transform: capitalize;;
+}
