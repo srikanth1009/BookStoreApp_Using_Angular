@@ -3,27 +3,22 @@
     <div fxLayout="row" fxLayoutAlign="space-between center">
       <div id="items">
         Books
-        <span id="active"> (128items) </span>
+        <span id="active"> (8items) </span>
       </div>
       </div>
     </div>
     <div
-      fxLayoutGap="40px"
-      fxLayout.lt-sm="column"
-      fxLayout.sm="row wrap"
-      fxLayoutAlign.sm="start center"
-      fxLayout.md="row wrap"
-      fxLayoutAlign.md="start center"
-      fxLayoutAlign.lt-sm="center center"
-      fxLayout.lg="row wrap"
-      fxLayoutAlign.lg="start center"
+    fxLayout="row wrap"
+    fxLayoutGap="16px grid"
     >
-      <div style="margin: 0px;" fxLayout="row" >
-        <mat-card *ngFor="let item of bookList">
+      <div style="margin: 0px;" fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%"  *ngFor="let item of bookList" >
+        <mat-card>
           <div class="bookImageDiv" fxLayoutAlign="center">
             <img src="{{item.bookLogo}}"  />
             <mat-card class="centered" 
-            ><p class="text">OUT OF STOCK</p></mat-card
+            >
+            <!-- <p class="text">OUT OF STOCK</p> -->
+            </mat-card
             >
           </div>
           <div class="bookInfoDiv" fxLayout="column">
@@ -32,7 +27,7 @@
                 <mat-card-title>{{item.bookName}}</mat-card-title>
                 <mat-card-subtitle>{{item.bookAuthor}}</mat-card-subtitle>
               </div>
-              <div>4.5</div><br>
+              <div><img class="rating"src="../../assets/bookimages/rating.png"/></div><br>
               <div class="price">Rs.{{item.bookPrice}}</div>
             </mat-card-content>
             <div class="left" fxLayout="row" fxLayoutAlign="space-around center">

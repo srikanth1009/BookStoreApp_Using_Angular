@@ -19,6 +19,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { ForgotPasswordComponent } from './component/forgot-password/forgot-password.component';
 import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { FooterComponent } from './component/footer/footer.component';
+import {MatGridListModule} from '@angular/material/grid-list';
+import { FlexLayoutModule } from '@angular/flex-layout';
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,7 +45,9 @@ import { FooterComponent } from './component/footer/footer.component';
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    MatGridListModule,
+    FlexLayoutModule
 
 
     // MatFormFieldModule,
