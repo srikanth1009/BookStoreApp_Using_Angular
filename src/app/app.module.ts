@@ -19,6 +19,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { ForgotPasswordComponent } from './component/forgot-password/forgot-password.component';
 import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { FooterComponent } from './component/footer/footer.component';
+import { DisplayBooksComponent } from './display-books/display-books.component';
+import {MatGridListModule} from '@angular/material/grid-list';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +30,8 @@ import { FooterComponent } from './component/footer/footer.component';
     HeaderComponent,
     ForgotPasswordComponent,
     FooterComponent,
-    DashboardComponent
+    DashboardComponent,
+    DisplayBooksComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +46,8 @@ import { FooterComponent } from './component/footer/footer.component';
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    MatGridListModule
 
 
     // MatFormFieldModule,

@@ -25,29 +25,6 @@ border-radius: 3px;
 margin-right: 690px;;
 opacity: 1;
 }
-@media only screen and (max-width: 720px) {
-    .searchIcon{
-      font-size: 17px;
-      margin-right: 3px;
-    }
-    }
-    .search-mat-card {
-        margin-left: -3%;
-        width: 50%;
-        height: 54%;
-        padding: 0px;
-      }
-.searchInput{
-    top: 23px;
-left: 368px;
-width: 49px;
-height: 16px;
-text-align: left;
-font: normal normal normal 12px/16px Roboto;
-letter-spacing: 0px;
-color: #9D9D9D;
-opacity: 1;
-}
 
 .header {
     display: flex;

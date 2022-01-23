@@ -1,48 +1,41 @@
 <app-header></app-header>
 <div class="whole-div">
-    <div fxLayout="row" fxLayoutAlign="space-between center">
-      <div id="items">
-        Books
-        <span id="active"> (128items) </span>
-      </div>
-      </div>
+  <div fxLayout="row" fxLayoutAlign="space-between center">
+    <div id="items">
+      Books
+      <span id="active"> (128items) </span>
     </div>
-    <div
-      fxLayoutGap="40px"
-      fxLayout.lt-sm="column"
-      fxLayout.sm="row wrap"
-      fxLayoutAlign.sm="start center"
-      fxLayout.md="row wrap"
-      fxLayoutAlign.md="start center"
-      fxLayoutAlign.lt-sm="center center"
-      fxLayout.lg="row wrap"
-      fxLayoutAlign.lg="start center"
-    >
-      <div style="margin: 0px;" fxLayout="row" >
-        <mat-card *ngFor="let item of bookList">
-          <div class="bookImageDiv" fxLayoutAlign="center">
-            <img src="{{item.bookLogo}}"  />
-            <mat-card class="centered" 
-            ><p class="text">OUT OF STOCK</p></mat-card
-            >
-          </div>
-          <div class="bookInfoDiv" fxLayout="column">
-            <mat-card-content>
-              <div class="a">
-                <mat-card-title>{{item.bookName}}</mat-card-title>
-                <mat-card-subtitle>{{item.bookAuthor}}</mat-card-subtitle>
-              </div>
-              <div>4.5</div><br>
-              <div class="price">Rs.{{item.bookPrice}}</div>
-            </mat-card-content>
-            <div class="left" fxLayout="row" fxLayoutAlign="space-around center">
-             
-            </div>
-          </div>
+  </div>
+</div>
+<div fxLayoutGap="40px" fxLayout.lt-sm="column" fxLayout.sm="row wrap" fxLayoutAlign.sm="start center"
+  fxLayout.md="row wrap" fxLayoutAlign.md="start center" fxLayoutAlign.lt-sm="center center" fxLayout.lg="row wrap"
+  fxLayoutAlign.lg="start center">
+
+  <div style="margin: 0px;" fxLayout="row">
+    <mat-card *ngFor="let item of bookList">
+      <div class="bookImageDiv" fxLayoutAlign="center">
+        <a href="display" >
+        <img src="{{item.bookLogo}}"  />
+      </a>
+        <mat-card class="centered">
+          <p class="text">OUT OF STOCK</p>
         </mat-card>
-        
       </div>
-    </div>
- 
-  
- 
+      <div class="bookInfoDiv" fxLayout="column">
+        <mat-card-content>
+          <div class="a">
+            <mat-card-title>{{item.bookName}}</mat-card-title>
+            <mat-card-subtitle>{{item.bookAuthor}}</mat-card-subtitle>
+          </div>
+          <div>4.5</div><br>
+          <div class="price">Rs.{{item.bookPrice}}</div>
+        </mat-card-content>
+        <div class="left" fxLayout="row" fxLayoutAlign="space-around center">
+
+        </div>
+      </div>
+    </mat-card>
+
+  </div>
+
+</div>
