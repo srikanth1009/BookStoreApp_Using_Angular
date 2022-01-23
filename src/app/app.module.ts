@@ -17,6 +17,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { ForgotPasswordComponent } from './component/forgot-password/forgot-password.component';
+import { AddbookComponent } from './addbook/addbook/addbook.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +25,8 @@ import { ForgotPasswordComponent } from './component/forgot-password/forgot-pass
     LoginComponent,
     ResetComponent,
     HeaderComponent,
-    ForgotPasswordComponent
+    ForgotPasswordComponent,
+    AddbookComponent
   ],
   imports: [
     BrowserModule,

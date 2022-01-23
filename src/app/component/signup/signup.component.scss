@@ -85,7 +85,7 @@ margin-top: -40px;
   top: 125px;
   left: 320px;
   width: 517px;
-  height: 323px;
+  height: 341px;
   background: #f5f5f5 0% 0% no-repeat padding-box;
   border-radius: 21px;
   opacity: 1;
@@ -96,16 +96,16 @@ margin-top: -40px;
 .image {
   margin-top: 25px;
   width: 245px;
-  height: 245px;
+  height: 240px;
   border-radius: 50%;
   margin-right: 326px;
   margin-left: 53px;
 }
 .example-card2 {
-  top: -253px;
+  top: -284px;
     left: 658px;
     width: 334px;
-    height: 370px;
+    height: 400px;
   background: #ffffff 0% 0% no-repeat padding-box;
   box-shadow: 0px 5px 15px #00000029;
   border: 1px solid #e4e4e4;
@@ -114,11 +114,12 @@ margin-top: -40px;
 }
 .h1 {
   font: normal normal medium 18px/24px Roboto;
-  margin-left: 60px;
+  margin-left: 70px;
   letter-spacing: 0px;
   color: #0a0102;
   text-transform: uppercase;
   opacity: 1;
+  margin-top: -15px;
   font-size: 16px;
 }
 
@@ -139,13 +140,15 @@ margin-top: -40px;
 }
 
 
-.loginbutton {
+.signupbutton {
+  
   margin-left: 50px;
   width: 253px;
   height: 37px;
   background: #a03037 0% 0% no-repeat padding-box;
   border-radius: 1px;
   opacity: 1;
+  // margin-top: 20px;
   border: none;
 }
 h2 {
@@ -210,7 +213,7 @@ mat-icon {
   width: 252px;
 }
 .forgot{
-  margin-left: 164px;
+  margin-left: 162px;
   
   font-size: small;
 }
@@ -229,70 +232,15 @@ mat-icon {
   text-transform: uppercase;
   opacity: 1;
 }
-// .emailId {
-//   margin-left: 50px;
-
-//   top: 390px;
-//   left: 727px;
-//   width: 260px;
-//   height: 35px;
-//   background: #ffffff 0% 0% no-repeat padding-box;
-//   border: 1px solid #e2e2e2;
-//   border-radius: 2px;
-//   opacity: 1;
-// // }
-// .password {
-//   margin-left: 50px;
-//   top: 396px;
-//   left: 727px;
-//   width: 260px;
-//   height: 35px;
-//   background: #ffffff 0% 0% no-repeat padding-box;
-//   border: 1px solid #e2e2e2;
-//   border-radius: 2px;
-//   opacity: 1;
-// }
-
-.example-card {
-  top: 84px;
-  left: 320px;
-  width: 517px;
-  height: 312px;
-  background: #f5f5f5 0% 0% no-repeat padding-box;
-  border-radius: 21px;
-  opacity: 1;
-  transition: 0.3s;
-  background-color: white;
-}
 
 .image {
-  margin-top: 50px;
+  margin-top: 25px;
   margin-bottom: 30px;
   width: 245px;
   height: 245px;
   border-radius: 50%;
   margin-right: 326px;
   margin-left: 53px;
-}
-.example-card2 {
-  top: -313px;
-    left: 658px;
-    width: 334px;
-    height: 409px;
-  background: #ffffff 0% 0% no-repeat padding-box;
-  box-shadow: 0px 5px 15px #00000029;
-  border: 1px solid #e4e4e4;
-  border-radius: 6px;
-  opacity: 1;
-}
-.h1 {
-  font: normal normal medium 18px/24px Roboto;
-  margin-left: 40px;
-  letter-spacing: 0px;
-  color: #0a0102;
-  text-transform: uppercase;
-  opacity: 1;
-  font-size: 16px;
 }
 
 ::ng-deep .mat-tab-header {
@@ -309,15 +257,16 @@ mat-icon {
   margin: 40px !important;
 }
 
-// .loginbutton {
-//   margin-left: 50px;
-//   width: 270px;
-//   height: 37px;
-//   background: #a03037 0% 0% no-repeat padding-box;
-//   border-radius: 1px;
-//   opacity: 1;
-//   border: none;
-// }
+.loginbutton {
+  margin-left: 50px;
+  width: 270px;
+  height: 37px;
+  background: #a03037 0% 0% no-repeat padding-box;
+  border-radius: 1px;
+  opacity: 1;
+  margin-top: 20px;
+  border: none;
+}
 h2 {
   width: 191px;
   text-align: center;
@@ -401,4 +350,3 @@ mat-icon {
 ::ng-deep .mat-form-field-label-wrapper {
   top: -1.5em;
 }
-

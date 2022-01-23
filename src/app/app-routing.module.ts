@@ -1,5 +1,6 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AddbookComponent } from './addbook/addbook/addbook.component';
 import { ForgotPasswordComponent } from './component/forgot-password/forgot-password.component';
 import { HeaderComponent } from './component/header/header.component';
 import { LoginComponent } from './component/login/login.component';
@@ -13,7 +14,9 @@ const routes: Routes = [
   {path:'signupform', component:SignupComponent},
   { path: 'reset/:token', component: ResetComponent},
   { path: '' , redirectTo: 'loginform', pathMatch: 'full'},
-  {path:'forgot', component:ForgotPasswordComponent}
+  {path:'forgot', component:ForgotPasswordComponent},
+  {path:'addbook', component:AddbookComponent}
+
 
 ];
 
