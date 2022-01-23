@@ -17,12 +17,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { ForgotPasswordComponent } from './component/forgot-password/forgot-password.component';
-<<<<<<< HEAD
-import { AddbookComponent } from './addbook/addbook/addbook.component';
-=======
-import { FooterComponent } from './component/footer/footer.component';
 import { DashboardComponent } from './component/dashboard/dashboard.component';
->>>>>>> 486ee50d65fc496efc080f21c99a66b6515bfc0d
+import { FooterComponent } from './component/footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,12 +27,8 @@ import { DashboardComponent } from './component/dashboard/dashboard.component';
     ResetComponent,
     HeaderComponent,
     ForgotPasswordComponent,
-<<<<<<< HEAD
-    AddbookComponent
-=======
     FooterComponent,
     DashboardComponent
->>>>>>> 486ee50d65fc496efc080f21c99a66b6515bfc0d
   ],
   imports: [
     BrowserModule,
