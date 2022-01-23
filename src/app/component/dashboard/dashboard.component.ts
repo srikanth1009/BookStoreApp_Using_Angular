@@ -28,6 +28,6 @@ export class DashboardComponent implements OnInit {
     get f(){
     return this.registerForm.controls;
   }
- 
-}
 
+
+}
