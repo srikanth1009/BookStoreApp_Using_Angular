@@ -5,7 +5,7 @@ import { Book } from '../model/book';
 import { BookService } from '../service/book.service';
 
 @Component({
-  selector: 'app-display-books',
+  selector: 'app-display-books', 
   templateUrl: './display-books.component.html',
   styleUrls: ['./display-books.component.scss']
 })
@@ -21,7 +21,7 @@ export class DisplayBooksComponent implements OnInit {
   ngOnInit() {
 
 //get
-this.bookservice.getBookById().subscribe( data => { 
+this.bookservice.getBooks().subscribe( data => { 
   this.book=data;
   this.bookList=this.book.data;
     console.log(this.bookList);

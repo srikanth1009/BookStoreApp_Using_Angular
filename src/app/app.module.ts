@@ -19,13 +19,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { ForgotPasswordComponent } from './component/forgot-password/forgot-password.component';
 import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { FooterComponent } from './component/footer/footer.component';
-<<<<<<< HEAD
 import {MatGridListModule} from '@angular/material/grid-list';
 import { FlexLayoutModule } from '@angular/flex-layout';
-=======
 import { DisplayBooksComponent } from './display-books/display-books.component';
-import {MatGridListModule} from '@angular/material/grid-list';
->>>>>>> 33c9d08da4031472dba879ff3935f2e7d29ad058
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,12 +48,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
     MatInputModule,
     MatButtonModule,
     MatIconModule,
-<<<<<<< HEAD
     MatGridListModule,
     FlexLayoutModule
-=======
-    MatGridListModule
->>>>>>> 33c9d08da4031472dba879ff3935f2e7d29ad058
 
 
     // MatFormFieldModule,

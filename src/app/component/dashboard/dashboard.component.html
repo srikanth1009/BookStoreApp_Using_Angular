@@ -3,7 +3,7 @@
     <div fxLayout="row" fxLayoutAlign="space-between center">
       <div id="items">
         Books
-        <span id="active"> (128items) </span>
+        <span id="active"> (8items) </span>
       </div>
       </div>
     </div>
@@ -14,12 +14,12 @@
       <div style="margin: 0px;" fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%"  *ngFor="let item of bookList" >
         <mat-card>
           <div class="bookImageDiv" fxLayoutAlign="center">
-            <img src="{{item.bookLogo}}"  />
-            <mat-card class="centered" 
+           <a href="display"> <img src="{{item.bookLogo}}"  /></a>
+            <!-- <mat-card class="centered" 
             >
-            <!-- <p class="text">OUT OF STOCK</p> -->
+            <p class="text">OUT OF STOCK</p>
             </mat-card
-            >
+            > -->
           </div>
           <div class="bookInfoDiv" fxLayout="column">
             <mat-card-content>
