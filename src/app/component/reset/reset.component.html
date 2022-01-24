@@ -5,15 +5,21 @@
         <h3 class="subtitle">Please enter your new password
         </h3>
         <br />
-        <form #resetForm="ngForm" (ngSubmit)="resetUserPassword()">
-            <label class="name">New Password</label>
-            <input class="input-reset" type="password" matInput="emailFormControl" placeholder="New Password"
-            [(ngModel)]="resetPassword.newPassword" name="newPassword">
-
-            <label class="name">Confirm Password</label>
+        <form #resetForm="ngForm" (ngSubmit)="resetUserPassword()" class="form">
+            <div class="form-group">
+            <label class="name" for="newPassword">New Password</label>
+            <input class="input-reset" type="password" matInput="emailFormControl" placeholder="New Password "
+            [(ngModel)]="resetPassword.newPassword" id="newPassword" name="newPassword" required minlength="8" maxlength="12" #newPassword="ngModel"><br>
+            <span *ngIf="!newPassword.valid && newPassword.touched" class="label-text error">Password At lest 8 charchter</span>
+            </div>
+            <div class="form-group">
+            <label class="name" for="confirmPassword">Confirm Password</label>
             <input class="input-reset" type="password" matInput="emailFormControl" placeholder="Confirm Password"
-                name="confirmPassword" [(ngModel)]="resetPassword.confirmPassword">
-            <button class="reset" type="submit" routerLink="/loginform" >Reset Your Password</button>
+             #cpass="ngModel" id="confirmPassword"  name="confirmPassword" [(ngModel)]="resetPassword.confirmPassword" required pattern="{{resetPassword.newPassword}}" >
+            <!-- <span *ngIf="cpass.submit && cpass.errors.pattern" >password and confirm password not match</span>-->
+            </div> 
+                
+            <button class="reset" type="submit"  >Reset Your Password</button>
         </form>
     </div>
 </div>

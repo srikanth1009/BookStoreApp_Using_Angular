@@ -103,3 +103,9 @@
     text-transform: uppercase;
     opacity: 1;
   }
+  .form{
+    flex-flow: row;
+  }
+  .error{
+    color: red;
+  }

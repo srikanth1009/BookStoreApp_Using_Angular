@@ -10,24 +10,33 @@ import { UserService } from 'src/app/service/user.service';
 })
 export class ResetComponent implements OnInit {
   public isloading = false;
-
+  
   token!: string;
   resetPassword: ResetPassword = new ResetPassword();
 
 
-  constructor(private route:ActivatedRoute, private service: UserService) { }
+  constructor(private route:ActivatedRoute, private service: UserService,private router:Router) { }
 
   ngOnInit(): void {
+    // this.resetPassword={
+    //   newPassword:'',
+    //   confirmPassword:''
+    //}
 
     this.token= this.route.snapshot.params['token'];
     console.log(this.token);
     console.log(this.resetPassword);
   }
-
+  
   resetUserPassword(){
     this.service.resetUserPassword(this.token, this.resetPassword).subscribe(
-        data=>{console.log(data) },
+        data=>{console.log(data) 
+        this.routeLogin();},
         error=>{ console.log(error)}
     );
   }
+  routeLogin(){
+    this.router.navigate(['/loginform']);
+  }
+  
 }

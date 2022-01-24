@@ -1,5 +1,5 @@
 export class ResetPassword{
 
-    public newPassword:string | undefined 
-    public confirmPassword:string | undefined 
+    newPassword:string | undefined ;
+    confirmPassword:string | undefined ;
 }
