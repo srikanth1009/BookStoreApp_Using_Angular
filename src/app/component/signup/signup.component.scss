@@ -76,7 +76,7 @@ margin-top: -40px;
   width: 252px;
   height: 30px;
   background: #ffffff 0% 0% no-repeat padding-box;
-  border: 1px solid #ff001c;
+  border: 1px solid #e2e2e2;
   border-radius: 2px;
   opacity: 1;
 }
@@ -350,4 +350,17 @@ mat-icon {
 ::ng-deep .mat-form-field-label-wrapper {
   top: -1.5em;
 }
+
+// input.ng-invalid.ng-touched{
+//   border: 1px solid red;
+//   margin-bottom: 0;
+// }
+
+// .span-signup{
+//   border-bottom: 4px solid #A03037;
+// }
+
+// .error{
+//   color: red;
+// }
 

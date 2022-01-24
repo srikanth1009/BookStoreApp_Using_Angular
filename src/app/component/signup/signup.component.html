@@ -48,7 +48,9 @@
             <div class="fullname">
               <mat-form-field appearance="legacy">
                 <mat-label>Full Name</mat-label>
-                <input fullname  matInput formControlName="fullName" type="text" name="fullname" />
+                <input fullname  matInput formControlName="fullName" type="text" name="fullname" /> 
+                <!-- pattern="[A-Z][A-Za-z ]{3,}$" /> -->
+                <!-- <span *ngIf="!signupForm.fullName.valid && signupForm.fullName.touched" class="label-text error">Full Name is not Valid!!</span> -->
                 <mat-icon matSuffix></mat-icon>
               </mat-form-field>
             </div>
@@ -58,6 +60,8 @@
                 <mat-label>Email Id</mat-label>
                 <input email  matInput type="email" placeholder="Email" name="emailId"
                   formControlName="emailId" />
+                  <!-- pattern="^(?!\\.)(?!.*?\\.\\.)(.+)@[^\\.][\\w.-]*[a-zA-Z0-9-]+(\\.)[a-z]{2,}+(\\.[a-z]{2,})*$" /> -->
+                  <!-- <span *ngIf="!signupForm.emailId.valid && signupForm.emailId.touched" class="label-text error">Email is not Valid!!</span> -->
                 <mat-icon matSuffix></mat-icon>
                 <mat-error>Enter valid email</mat-error>
               </mat-form-field>
@@ -67,6 +71,8 @@
               <mat-form-field appearance="legacy">
                 <mat-label>Password</mat-label>
                 <input matInput formControlName="password" placeholder="Password" [type]="hide ? 'password' : 'text'" />
+                <!-- pattern="^[a-z A-z 0-9](?=.*[@#$%]){8,}$"/> -->
+                <!-- <span *ngIf="!signupForm.password.valid && signupForm.password.touched" class="label-text error">Password should be in Proper Format!!</span> -->
                 <!-- <span *ngIf="!password.valid && password.touched" class="label-text error">Password should be in Proper Format!!</span> -->
                 <mat-icon matSuffix ></mat-icon>
               
@@ -76,7 +82,9 @@
             <div class="mobileNo">
               <mat-form-field appearance="legacy">
                 <mat-label>Mobile No</mat-label>
-                <input matInput formControlName="mobileNo" />
+                <input matInput formControlName="mobileNo" placeholder="Mobile Number" />
+                <!-- pattern="^[0-9]{2}[ ]{1}[0-9]{10}$"/> -->
+                <!-- <span *ngIf="!signupForm.mobileNo.valid && signupForm.mobileNo.touched" class="label-text error">Mobile Number must be 10 digit</span> -->
                 <mat-icon matSuffix></mat-icon>
               </mat-form-field>
             </div>
