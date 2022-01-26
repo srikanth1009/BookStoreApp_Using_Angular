@@ -24,6 +24,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { DisplayBooksComponent } from './display-books/display-books.component';
 import {MatListModule} from '@angular/material/list';
 import { OrderSucessfulComponent } from './order-sucessful/order-sucessful.component';
+import { MyOrderComponent } from './my-order/my-order.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { OrderSucessfulComponent } from './order-sucessful/order-sucessful.compo
     FooterComponent,
     DashboardComponent,
     DisplayBooksComponent,
-    OrderSucessfulComponent
+    OrderSucessfulComponent,
+    MyOrderComponent
   ],
   imports: [
     BrowserModule,
