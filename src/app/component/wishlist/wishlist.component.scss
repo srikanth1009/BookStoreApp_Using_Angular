@@ -1,0 +1,70 @@
+.home-mycart{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-left: 174px;
+    width: 674px;
+    // border: solid 1px black;
+}
+.home{
+    top: 79px;
+    left: 174px;
+    width: 40px;
+    height: 16px;
+    text-align: left;
+    font: normal normal normal 12px/16px Roboto;
+    letter-spacing: 0px;
+    color: #9D9D9D;
+    opacity: 1;
+}
+.mycart{
+top: 79px;
+left: 219px;
+width: 40px;
+height: 16px;
+text-align: left;
+font: normal normal normal 12px/16px Roboto;
+letter-spacing: 0px;
+color: #0A0102;
+opacity: 1;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    margin-left: 174px;
+width: 900px;
+// height: 251px;
+background: #FFFFFF 0% 0% no-repeat padding-box;
+border: 1px solid rgb(9 8 8 / 14%);
+border-radius: 1px;
+}
+.row1{
+    width: 900px;
+height: 55px;
+background: #F5F5F5 0% 0% no-repeat padding-box;
+border: 1px solid #E4E4E4;
+border-radius: 1px;
+opacity: 1;
+}
+.h2wishlist{
+
+width: 131px;
+height: 24px;
+text-align: left;
+font: normal normal medium 18px/24px Roboto;
+letter-spacing: 0px;
+color: #0A0102;
+opacity: 1;
+}
+img{
+    top: 192px;
+    left: 213px;
+    width: 65px;
+    height: 85px;
+    background: transparent url('../../../assets/bookimages/Image 20.png') 0% 0% no-repeat padding-box;
+    opacity: 1;
+    margin-left: 36px;
+    }
+.row2{
+    padding: 25px;
+}    

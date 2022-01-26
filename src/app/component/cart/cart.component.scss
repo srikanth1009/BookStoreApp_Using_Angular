@@ -1,0 +1,171 @@
+.home-mycart{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-left: 174px;
+    width: 674px;
+    // border: solid 1px black;
+}
+.home{
+    top: 79px;
+    left: 174px;
+    width: 40px;
+    height: 16px;
+    text-align: left;
+    font: normal normal normal 12px/16px Roboto;
+    letter-spacing: 0px;
+    color: #9D9D9D;
+    opacity: 1;
+}
+.mycart{
+top: 79px;
+left: 219px;
+width: 40px;
+height: 16px;
+text-align: left;
+font: normal normal normal 12px/16px Roboto;
+letter-spacing: 0px;
+color: #0A0102;
+opacity: 1;
+}
+.card1{
+margin-left: 174px;
+width: 674px;
+height: 251px;
+background: #FFFFFF 0% 0% no-repeat padding-box;
+border: 1px solid rgb(9 8 8 / 14%);
+border-radius: 1px;
+
+}
+img{
+top: 192px;
+left: 213px;
+width: 65px;
+height: 85px;
+background: transparent url('../../../assets/bookimages/Image 20.png') 0% 0% no-repeat padding-box;
+opacity: 1;
+margin-left: 36px;
+}
+.h2mycart{
+margin-left: 36px;
+top: 130px;
+left: 213px;
+width: 85px;
+height: 22px;
+text-align: left;
+font: normal normal medium 18px/22px Lato;
+letter-spacing: 0px;
+color: #0A0102;
+opacity: 1;
+}
+.card1form{
+    margin-top: -110px;
+    margin-left: 130px;
+}
+.card1name{
+top: 188px;
+left: 316px;
+width: 133px;
+height: 17px;
+text-align: left;
+font: normal normal normal 14px/17px Lato;
+letter-spacing: 0px;
+color: #0A0102;
+opacity: 1;
+}
+.card1author{
+margin-top: -15px;
+text-align: left;
+font: normal normal normal 10px/12px Lato;
+letter-spacing: 0px;
+color: #9D9D9D;
+opacity: 1;
+}
+.card1price{
+
+text-align: left;
+font: normal normal bold 15px/18px Lato;
+letter-spacing: 0px;
+color: #0A0102;
+opacity: 1;
+}
+.increment{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    width: 100px;
+}
+
+.add,sub{
+background: #FAFAFA 0% 0% no-repeat padding-box;
+border: 1px solid #DBDBDB;
+opacity: 1;
+margin-right:16px;
+
+}
+
+// card 2
+.card2,.card3{
+margin-left: 174px;
+width: 674px;
+
+margin-top: 10px;
+background: #FFFFFF 0% 0% no-repeat padding-box;
+border: 1px solid rgb(9 8 8 / 14%);
+border-radius: 1px;
+}
+.mat-expansion-panel-header {
+    height: 60px;
+}
+.fullname,.mobileno,.address,.state,.city{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.label{
+width: 82px;
+height: 16px;
+text-align: left;
+font: normal normal normal 12px/16px Roboto;
+letter-spacing: 0px;
+color: #0A0102;
+text-transform: capitalize;
+opacity: 1;
+}
+.input{
+width: 200px;
+height: 35px;
+background: #FFFFFF 0% 0% no-repeat padding-box;
+border: 1px solid #DCDCDC;
+opacity: 1;
+}
+.contact{
+    margin-left: 52px;
+    flex-wrap: wrap;
+    display: inline-flex;
+    gap: 10px;
+}
+.contactrow{
+    display: inline-flex;
+    flex-direction: row;
+    width:400px;
+    gap: 20px;
+}
+.btncontinue{
+width: 100px;
+height: 30px;
+background: #3371B5 0% 0% no-repeat padding-box;
+border-radius: 3px;
+font: normal normal medium 14px/17px Lato;
+font-size: 12px;
+
+letter-spacing: 0px;
+color: #FFFFFF;
+text-transform: uppercase;
+opacity: 1;
+margin-top: 20px;
+margin-left: 200px;
+}

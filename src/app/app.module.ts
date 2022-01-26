@@ -22,6 +22,8 @@ import { FooterComponent } from './component/footer/footer.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { DisplayBooksComponent } from './display-books/display-books.component';
+import { CartComponent } from './component/cart/cart.component';
+import { WishlistComponent } from './component/wishlist/wishlist.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +34,9 @@ import { DisplayBooksComponent } from './display-books/display-books.component';
     ForgotPasswordComponent,
     FooterComponent,
     DashboardComponent,
-    DisplayBooksComponent
+    DisplayBooksComponent,
+    CartComponent,
+    WishlistComponent
   ],
   imports: [
     BrowserModule,

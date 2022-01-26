@@ -1,5 +1,6 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CartComponent } from './component/cart/cart.component';
 
 import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { ForgotPasswordComponent } from './component/forgot-password/forgot-password.component';
@@ -7,6 +8,7 @@ import { HeaderComponent } from './component/header/header.component';
 import { LoginComponent } from './component/login/login.component';
 import { ResetComponent } from './component/reset/reset.component';
 import { SignupComponent } from './component/signup/signup.component';
+import { WishlistComponent } from './component/wishlist/wishlist.component';
 import { DisplayBooksComponent } from './display-books/display-books.component';
 
 const routes: Routes = [
@@ -18,7 +20,9 @@ const routes: Routes = [
   { path: '' , redirectTo: 'loginform', pathMatch: 'full'},
   {path:'forgot', component:ForgotPasswordComponent},
   {path:'books', component:DashboardComponent},
-  {path:'display', component:DisplayBooksComponent}
+  {path:'display', component:DisplayBooksComponent},
+  {path:'cart',component:CartComponent},
+  {path:'wishlist',component:WishlistComponent}
 
  
 
