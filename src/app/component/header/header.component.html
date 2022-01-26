@@ -20,12 +20,20 @@
     <div class="personbutton">
 
 
-        <button style="background-color: brown; border: 0chs; border: 0em;" (click)="toogleTag()">
+        <!-- <button style="background-color: brown; border: 0chs; border: 0em;" (click)="toogleTag()">
             <img src="../../../assets/bookimages/person.png">
             <h5 style="color: aliceblue;">Anant</h5>
 
 
-        </button>
+        </button> -->
+        <mat-icon style="    color: white;
+        width: 27px;
+        background-color: #A03037;" (click)="toogleTag()" >person_outline
+        </mat-icon><div>
+            <h5 style="color: white; 
+            margin-left: 43px;">Anant</h5>
+        </div>
+        
 
         <div class="buttons" *ngIf="showMe">
             <mat-card-content >
