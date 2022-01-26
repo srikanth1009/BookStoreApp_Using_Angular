@@ -32,7 +32,7 @@
             <mat-card class="mat-card3">
                 <mat-card-title>HelloAnant</mat-card-title><br>
                 <mat-card-title >Profile</mat-card-title><br>
-                <mat-card-title>MyOrders</mat-card-title><br>
+                <mat-card-title routerLink="/myorder">MyOrders</mat-card-title><br>
                 <mat-card-title routerLink="/wishlist">MyWishlist</mat-card-title><br>
                 <mat-card-title routerLink="/signupform">SignOut</mat-card-title><br>
             </mat-card>
@@ -43,7 +43,7 @@
 
     </div>
     <div class="cartbutton">
-        <button style="background-color: brown; border: 0chs; border: 0cm;">
+        <button style="background-color: brown; border: 0chs; border: 0cm;" routerLink="/cart">
             <i class="material-icons-outlined" matBadge="" matBadgeColor="accent" matBadgeSize="small"> <svg
                     xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#FFFFFF">
                     <path d="M0 0h24v24H0V0z" fill="none" />
@@ -52,7 +52,9 @@
                 </svg></i>
 
             <h5 style="color: white;">Cart</h5>
+            
         </button>
+        
 
     </div>
 

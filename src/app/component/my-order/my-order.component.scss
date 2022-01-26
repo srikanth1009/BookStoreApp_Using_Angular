@@ -39,15 +39,15 @@ background: #FFFFFF 0% 0% no-repeat padding-box;
 border: 1px solid rgb(9 8 8 / 14%);
 border-radius: 1px;
 }
-.row1{
-    width: 900px;
-height: 55px;
-background: #F5F5F5 0% 0% no-repeat padding-box;
-border: 1px solid #E4E4E4;
-border-radius: 1px;
-opacity: 1;
+// .row1{
+//     width: 900px;
+// height: 55px;
+// background: #F5F5F5 0% 0% no-repeat padding-box;
+// border: 1px solid #E4E4E4;
+// border-radius: 1px;
+// opacity: 1;
 
-}
+
 .h2wishlist{
 
 width: 131px;
@@ -100,14 +100,16 @@ font: normal normal bold 15px/18px Lato;
 letter-spacing: 0px;
 color: #0A0102;
 opacity: 1;
-}   
+} 
+.orderdate{
+    top: 145px;
+left: 972px;
+width: 174px;
+height: 20px;
+opacity: 1;
+}  
 
 .row2{
     padding: 25px;
     display: flex;
 } 
-.btndelete{
-    margin-top: 33px;
-    margin-left: 83px;
-    opacity: 0.5;
-}
