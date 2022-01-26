@@ -44,6 +44,6 @@ export class LoginComponent implements OnInit {
     this.userService.userlogin(newformData).subscribe((data: any) =>
       console.log((data))
     );
-    this.router.navigateByUrl("/");
+    this.router.navigateByUrl("/books");
 }
 }

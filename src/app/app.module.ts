@@ -22,6 +22,8 @@ import { FooterComponent } from './component/footer/footer.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { DisplayBooksComponent } from './display-books/display-books.component';
+import { CartComponent } from './component/cart/cart.component';
+import { WishlistComponent } from './component/wishlist/wishlist.component';
 import {MatListModule} from '@angular/material/list';
 import { OrderSucessfulComponent } from './order-sucessful/order-sucessful.component';
 import { MyOrderComponent } from './component/my-order/my-order.component';
@@ -38,7 +40,10 @@ import { MyOrderComponent } from './component/my-order/my-order.component';
     DashboardComponent,
     DisplayBooksComponent,
     OrderSucessfulComponent,
-    MyOrderComponent
+    MyOrderComponent,
+    CartComponent,
+    WishlistComponent,
+    OrderSucessfulComponent
   ],
   imports: [
     BrowserModule,

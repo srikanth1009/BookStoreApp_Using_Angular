@@ -100,16 +100,14 @@ font: normal normal bold 15px/18px Lato;
 letter-spacing: 0px;
 color: #0A0102;
 opacity: 1;
-} 
-.orderdate{
-    top: 145px;
-left: 972px;
-width: 174px;
-height: 20px;
-opacity: 1;
-}  
+}   
 
 .row2{
     padding: 25px;
     display: flex;
 } 
+.btndelete{
+    margin-top: 33px;
+    margin-left: 83px;
+    opacity: 0.5;
+}

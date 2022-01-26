@@ -1,0 +1,103 @@
+<app-header></app-header>
+
+<div class="home-mycart">
+  <h4 class="home">home /</h4>
+  <h4 class="mycart">Mycart</h4>
+</div>
+<div class="card1">
+  <h2 class="h2mycart">Mycart()</h2>
+  <img src="../../../assets/bookimages/Image 20.png">
+  <div class="card1form">
+    <h4 class="card1name">Don't Make Me Think</h4>
+    <h4 class="card1author">by Steve Krug</h4>
+    <h4 class="card1price">Rs.400</h4>
+    <div class="increment">
+      <button class="add" type="button" (click)="dicrement()">-</button>
+      <input type="text" id="counter" value="{{counter}}" style="width: 16px;margin-left: -10px;margin-right: 5px;">
+      <button class="sub" type="button" (click)="increment()">+</button>
+    </div>
+    <button class="btncontinue" style="margin-left: 400px;" type="button">PlaceOrder</button>
+  </div>
+</div>
+<div class="card2">
+  <mat-expansion-panel hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Customer Details
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <form class="contact">
+      <div class="contactrow">
+        <div class="fullname">
+          <label class="label" for="fullname">Full Name</label>
+          <input class="input" type="text">
+
+        </div>
+        <div class="mobileno">
+          <label class="label" for="mobileno">Mobile Number</label>
+          <input class="input" type="text">
+        </div>
+      </div>
+      <div class="address">
+        <label class="label" for="address">Address</label>
+        <input class="input" style="width: 420px; height: 80px;" type="text">
+      </div>
+      <div class="contactrow">
+        <div class="city">
+          <label class="label" for="city">City</label>
+          <input class="input" type="text">
+        </div>
+        <div class="state">
+          <label class="label" for="state">State</label>
+          <input class="input" type="text">
+        </div>
+      </div>
+
+      <div class="radiorow" style="display: inline-flex;gap: 25px;flex-direction: row;align-items: end;">
+        <h4 style="top: 733px;
+                left: 229px;
+                width: 26px;
+                height: 16px;
+                text-align: left;
+                font: normal normal normal 12px/16px Roboto;
+                letter-spacing: 0px;
+                color: #0A0102;
+                opacity: 1;">Type</h4>
+
+        <div>
+          <input type="radio" id="home" name="type" value="home">
+          <label class="label" for="home">Home</label><br>
+        </div>
+        <div>
+          <input type="radio" id="work" name="type" value="work">
+          <label class="label" for="work">Work</label><br>
+        </div>
+        <div>
+          <input type="radio" id="other" name="type" value="other">
+          <label for="other" class="label">Other</label><br>
+        </div>
+
+      </div>
+      
+      <button class="btncontinue" type="button">Continue</button>
+    </form>
+  </mat-expansion-panel>
+ 
+</div>
+<div class="card3">
+  <mat-expansion-panel hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Order Summary
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <img src="../../../assets/bookimages/Image 20.png">
+  <div class="card1form">
+    <h4 class="card1name">Don't Make Me Think</h4>
+    <h4 class="card1author">by Steve Krug</h4>
+    <h4 class="card1price">Rs.400</h4>
+  </div>
+  <button class="btncontinue" style="margin-left: 510px;" type="button">Checkout</button>
+
+  </mat-expansion-panel>  
+</div>
