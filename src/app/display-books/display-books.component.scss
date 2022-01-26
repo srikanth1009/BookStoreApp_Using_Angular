@@ -15,6 +15,7 @@
 }
 
 .main-container {
+    
     height: 100%;
     width: 100%;
     display: flex;
@@ -46,6 +47,8 @@
 }
 
 mat-card {
+    
+    
     display: flex;
     flex-wrap: wrap;
     width: 14.4rem;
@@ -58,6 +61,7 @@ mat-card {
 
 .mat-card.mat-card {
     padding: 20px;
+   
 }
 
 mat-card-title {
@@ -70,18 +74,28 @@ mat-card-title {
     width: 219px;
     align-items: center;
     align-content: center;
+
 }
 .bookdetils{
     margin-left: 312px;
     margin-top: -430px;
 }
+.inputs {
+    margin-left: 1032px;
+    width: 207px;
+height: 16px;
+
+
+}
+
 .homebutton{
-   
+    border: 0em;
     text-align: left;
     // font: normal normal normal 12px/16px Roboto;
     letter-spacing: 0px;
     margin-top: -480px;
     margin-left: 43px;
+    
    
     background-color: white;
     border-color: #d4d5d2;
@@ -152,11 +166,15 @@ opacity: 1;
 margin-left: -8px;
 }
 .feedback{
+    width: 349px;
+    height: 145px;
     text-align: left;
-font: normal normal normal 18px/24px Roboto;
-letter-spacing: 0px;
-color:#0A0102;;
-opacity: 1;
+    font: normal normal normal 18px/24px Roboto;
+    letter-spacing: 0px;
+    background: #F5F5F5 0% 0% no-repeat padding-box;
+    border-radius: 2px;
+    opacity: 1;
+
 
 }
 .rating{
@@ -182,7 +200,8 @@ height: 31px;
 text-align: left;
 font: normal normal normal 15px/20px Roboto;
 letter-spacing: 0px;
-color: #707070;
+font-family: Arial, Helvetica, sans-serif;
+color: white;
 opacity: 0.18;
 
 }
@@ -254,20 +273,7 @@ opacity: 0.18;
     text-transform: uppercase;
 }
 
-// .out-of-stock {
-//     background: #ffffff 0% 0% no-repeat padding-box;
-//     text-align: center;
-//     padding: 8px 0px;
-//     font-size: medium;
-//     position: absolute;
-//     top: 100px;
-//     left: 30px;
-//     right: 30px;
-//     box-shadow: 0px 3px 8px #00000029;
-//     border-radius: 2px;
-//     opacity: 0.9;
-//     text-transform: uppercase;
-// }
+
 
 
 .a {

@@ -3,18 +3,16 @@
     box-sizing: border-box;
 }
 
-.search{
-    top: -2px;
-    left: 348px;
-    width: 43px;
-    height: 29px;
-    background: white 0% 0% no-repeat padding-box;
-    opacity: 1;
-    color: #FCFCFC;
-    margin-left: -335px;
-    margin-top: 3px;
+// .mat-icon{
+   
+//     background: white 0% 0% no-repeat padding-box;
+//     opacity: 1;
+//     color: #FCFCFC;
+//     margin-left: -335px;
+//     margin-top: 3px;
 
-}
+// }
+
 .searchbar{
     top: 14px;
 left: 334px;
@@ -35,16 +33,45 @@ opacity: 1;
     background: #A03037 0% 0% no-repeat padding-box;
     top: 0px;
     left: 0px;
-    width: 1357px;
+    width: 1341px;
     height: 60px;
     opacity: 1;
 }
+.searchtab{
+    width: 22px;
+    height: 26px;
+    background: white 0% 0% no-repeat padding-box;
+    margin-right: -23px;
+    margin-top: 3px;
+    opacity: 0.3;
+    border-style:hidden;
+}
+.Serach{
+    top: 24px;
+left: 348px;
+width: 13px;
+height: 13px;
+background: #9D9D9D 0% 0% no-repeat padding-box;
+opacity: 1;
+
+}
+.serachinput{
+    top: -8px;
+    border-style: hidden;
+    padding: 3px;
+    height: 84%;
+    width: 94%;
+    position: relative;
+   
+}
+
 .logo-content {
     display: flex;
     flex-direction: row;
     align-items: center;
     border: 0em solid green;
     width: 80%;
+    margin-right: -207px;
 }
 
 .logo-content img {
@@ -74,7 +101,59 @@ opacity: 1;
     color: #FFFFFF;
     text-transform: capitalize;;
 }
+.material-icons {
+    font-family: "Material Icons";
+    font-weight: normal;
+    width: 499px;
+    height: 30px;
+    font-style: normal;
+    font-size: 25px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    margin-left: 27px;
+    background: #FCFCFC 0% 0% no-repeat padding-box;
+    margin-top: 4px;
+    margin-left: 48px;
+    border-radius: 3px;
+    opacity: 1;
+    -webkit-font-smoothing: antialiased;;
+}
+.cartbutton{
+    top: 21px;
+    left: 1164px;
+    width: 40px;
+    height: 45px;
+    opacity: 1;
+    margin-left: -275px;
+}
+.mat-card3{
+ 
+    width: 99px;
+    margin-top: 11px;
+    margin-left: -7px;
+    height: 239px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #E2E2E2;
+    border-radius: 3px;
+    opacity: 1;
+}
+.personbutton{
+    top: 18px;
+left: 1064px;
+width: 31px;
+height: 46px;
+opacity: 1;
+margin-right: 329px;
+}
 
+.material-icons{
+    background-color: white;
+}
 // .text {
 //     font-family: "Montserrat", sans-serif;
 //     letter-spacing: 0px;

@@ -14,6 +14,7 @@ export class DashboardComponent implements OnInit {
   submitted=false;
   book:any;
   bookList:Book[]=[];
+  bookId:any;
 
  constructor(private bookservice: BookService ){}
  ngOnInit(){
@@ -28,6 +29,24 @@ export class DashboardComponent implements OnInit {
     get f(){
     return this.registerForm.controls;
   }
+  // getOne(){
+  //   this.bookservice.getOne(this.bookId).subscribe( data => { 
+  //     // this.data = data;
+  //     console.log(data);
+      
+  //   })
+  // }
+  getBookDetails(){
+ 
+    this.bookservice.getBookById(this.bookId).subscribe((data) => {
+      console.log(data);
+    });
 
+}
+quickView(book:any){
+  localStorage.setItem('bookId', book.bookId);
+  
+  
+}
 
 }

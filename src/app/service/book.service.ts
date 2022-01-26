@@ -17,9 +17,9 @@ export class BookService {
     return this.httpClient.get(environment.book_api+'/getbooks');
   }
 
-  getBookById(){
-    return this.httpClient.get(environment.book_api+'/getBookDetailsByID/');
-  }
+  getBookById(bookId:any){
+return this.httpClient.get(environment.book_api+'/getBookDetailsByID/'+ bookId);
+}
 
 }
 

@@ -22,6 +22,9 @@ import { FooterComponent } from './component/footer/footer.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { DisplayBooksComponent } from './display-books/display-books.component';
+import {MatListModule} from '@angular/material/list';
+import { OrderSucessfulComponent } from './order-sucessful/order-sucessful.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +35,8 @@ import { DisplayBooksComponent } from './display-books/display-books.component';
     ForgotPasswordComponent,
     FooterComponent,
     DashboardComponent,
-    DisplayBooksComponent
+    DisplayBooksComponent,
+    OrderSucessfulComponent
   ],
   imports: [
     BrowserModule,
@@ -49,7 +53,8 @@ import { DisplayBooksComponent } from './display-books/display-books.component';
     MatButtonModule,
     MatIconModule,
     MatGridListModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatListModule
 
 
     // MatFormFieldModule,

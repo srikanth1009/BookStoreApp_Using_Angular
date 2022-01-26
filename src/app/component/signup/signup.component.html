@@ -1,4 +1,5 @@
 <div id="body">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
   <mat-card class="example-card">
     <div>
       <img src="../../../assets/signup/womencart.png" class="image" />
@@ -25,16 +26,19 @@
           
             <div class="password">
               <mat-form-field appearance="legacy">
+              
                 <mat-label>Password</mat-label>
-                <input matInput formControlName="password" [type]="hide ? 'password' : 'text'" />
-                <mat-icon matSuffix></mat-icon>
+                
+               <input matInput formControlName="password" [type]="hide ? 'password' : 'text'" />
+               <i class="far fa-eye" id="togglePassword" style="margin-left: -30px; cursor: pointer;"></i>
+        
               </mat-form-field>
               <a class="forgot" href="forgot">forgot password?</a>
             </div>
            
 
             <!-- <div> -->
-            <button class="loginbutton" style="color: white" (click)="addLogin()">Login</button>
+            <button class="loginbutton" style="color: white" routerLink="/books" (click)="addLogin()">Login</button>
             <h3>OR</h3>
             <button class="facebookbutton" style="color: white">Facbook</button>
             <button class="googlebutton" style="color: black">Google</button>
@@ -48,7 +52,7 @@
             <div class="fullname">
               <mat-form-field appearance="legacy">
                 <mat-label>Full Name</mat-label>
-                <input fullname required matInput formControlName="fullName" type="text" name="fullname" />
+                <input fullname matInput formControlName="fullName" type="text" name="fullname" />
                 <mat-icon matSuffix></mat-icon>
               </mat-form-field>
             </div>
@@ -66,8 +70,11 @@
             <div class="password">
               <mat-form-field appearance="legacy">
                 <mat-label>Password</mat-label>
-                <input matInput formControlName="password" placeholder="Password" [type]="hide ? 'password' : 'text'" />
-                <mat-icon matSuffix></mat-icon>
+                <!-- <mat-icon>remove_red_eye</mat-icon>  -->
+                <input matInput formControlName="password" [type]="hide ? 'password' : 'text'" />
+                <i class="far fa-eye" id="togglePassword" style="margin-left: -30px; cursor: pointer;"></i>
+         
+             
               </mat-form-field>
             </div>
 

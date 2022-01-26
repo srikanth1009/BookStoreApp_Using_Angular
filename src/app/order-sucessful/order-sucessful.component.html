@@ -1,0 +1,52 @@
+<app-header></app-header>
+<div class="main-div" fxLayout="column" fxLayoutAlign="space-around center">
+
+    <div class="successImageDiv" fxLayoutAlign="center">
+        <img src="../../assets/order/SuccessPage.jpg"/>
+    </div>
+
+<span>Hurray!!!your order is confirmed</span>
+<span>the order id is #12345 save the order id for</span>
+<span>further communication...</span>
+<div fxLayout="column" fxLayoutAlign="center-center">
+    <table
+        class="table table-bordered"
+        style="font-size: 60%; text-align: center; margin-top: 4%">
+        <thead class="Contact">
+            
+                <div class="contactus">
+                    <div class="card">
+                        <mat-card class="email">
+                            <mat-card-title style="display: flex; justify-content: center; align-items: center; background-color: rgb(248, 195, 191);">Email us</mat-card-title>
+                            <mat-card-content style="display: flex; justify-content: center; align-items: center;">bangalore.bridgelabz@gmail.com</mat-card-content>
+                        </mat-card>
+                    </div>
+                </div>
+                <div class="card">
+                    <mat-card>
+                        <mat-card-title style="  display: flex;  justify-content: center;  align-items: center;background-color: rgb(248, 195, 191); ">Contact us</mat-card-title>
+                        <mat-card-content style="display: flex; justify-content: center; align-items: center;">+91-0123456789</mat-card-content>
+                    </mat-card>
+                </div>
+        </thead>
+        <tbody>
+            <tr>
+                <td>admin@bookstore.com</td>
+                <td>+918163475881</td>
+                <td>42,14th Main, 15th cross,Section 4, opp to BDA complex, near Kumarakom
+                    restuarant, HSR Layout, Bangalore, 560034</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div fxLayout="row" fxLayoutAlign="space-around center" style="margin-top: 2%">
+    <div class="shoppingbutton">
+        <button
+            mat-raised-button
+            style="background-color: #3371B5; color: aliceblue" [routerLink]="['/books']">Continue Shopping</button>
+    </div>
+    
+</div>
+
+</div>
+<!-- <app-footer></app-footer> -->

@@ -8,6 +8,7 @@ import { LoginComponent } from './component/login/login.component';
 import { ResetComponent } from './component/reset/reset.component';
 import { SignupComponent } from './component/signup/signup.component';
 import { DisplayBooksComponent } from './display-books/display-books.component';
+import { OrderSucessfulComponent } from './order-sucessful/order-sucessful.component';
 
 const routes: Routes = [
   // {path:'', component:LoginComponent},
@@ -18,7 +19,8 @@ const routes: Routes = [
   { path: '' , redirectTo: 'loginform', pathMatch: 'full'},
   {path:'forgot', component:ForgotPasswordComponent},
   {path:'books', component:DashboardComponent},
-  {path:'display', component:DisplayBooksComponent}
+  {path:'display', component:DisplayBooksComponent},
+  { path: 'order', component: OrderSucessfulComponent },
 
  
 
