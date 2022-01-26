@@ -14,12 +14,12 @@ export class BookService {
   //get call
   
   getBooks(){
-    return this.httpClient.get(environment.book_api+'/getbooks');
+    return this.httpClient.get(environment.book_api+'/getBooks');
   }
 
-  getBookById(){
-    return this.httpClient.get(environment.book_api+'/getBookDetailsByID/1 ');
-  }
+  getBookById(bookId:any){
+return this.httpClient.get(environment.book_api+'/getBookDetailsByID/'+ bookId);
+}
 
 }
 

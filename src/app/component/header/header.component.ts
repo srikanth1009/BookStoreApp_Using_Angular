@@ -6,11 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
+  showMe: boolean =false;
+  
   constructor() { }
 
   ngOnInit(): void {
   }
-  
 
+toogleTag(){
+  this.showMe=!this.showMe
+}
 }

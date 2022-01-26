@@ -24,6 +24,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { DisplayBooksComponent } from './display-books/display-books.component';
 import { CartComponent } from './component/cart/cart.component';
 import { WishlistComponent } from './component/wishlist/wishlist.component';
+import {MatListModule} from '@angular/material/list';
+import { OrderSucessfulComponent } from './order-sucessful/order-sucessful.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,7 +56,8 @@ import { WishlistComponent } from './component/wishlist/wishlist.component';
     MatButtonModule,
     MatIconModule,
     MatGridListModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatListModule
 
 
     // MatFormFieldModule,

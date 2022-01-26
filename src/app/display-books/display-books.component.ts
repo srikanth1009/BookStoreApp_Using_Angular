@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 import { Book } from '../model/book';
 import { BookService } from '../service/book.service';
 
@@ -16,9 +17,11 @@ export class DisplayBooksComponent implements OnInit {
   user:any;
   book:any;
   bookList:Book[]=[];
-  constructor(private bookservice: BookService ) { }
+  bookId:any;
+  constructor( private route:ActivatedRoute, private bookservice: BookService ) { }
 
   ngOnInit() {
+    this.bookId
 
 //get
 this.bookservice.getBooks().subscribe( data => { 
@@ -27,15 +30,13 @@ this.bookservice.getBooks().subscribe( data => {
     console.log(this.bookList);
 
      });
-  }
-
-  // getBookDetails(bookId:number){
- 
-  //   this.bookservice.getBookById(bookId).subscribe((data) => {
-  //     console.log(data);
-  //   });
-
   
+  }
+   getBookDetails(bookId:number){
+ 
+    this.bookservice.getBookById(bookId).subscribe((data) => {
+      console.log(data);
+    });
 
 }
-
+}
