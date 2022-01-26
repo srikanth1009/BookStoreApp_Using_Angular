@@ -39,7 +39,8 @@ import { OrderSucessfulComponent } from './order-sucessful/order-sucessful.compo
     DashboardComponent,
     DisplayBooksComponent,
     CartComponent,
-    WishlistComponent
+    WishlistComponent,
+    OrderSucessfulComponent
   ],
   imports: [
     BrowserModule,
