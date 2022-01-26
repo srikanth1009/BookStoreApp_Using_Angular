@@ -5,6 +5,7 @@ import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { ForgotPasswordComponent } from './component/forgot-password/forgot-password.component';
 import { HeaderComponent } from './component/header/header.component';
 import { LoginComponent } from './component/login/login.component';
+import { MyOrderComponent } from './component/my-order/my-order.component';
 import { ResetComponent } from './component/reset/reset.component';
 import { SignupComponent } from './component/signup/signup.component';
 import { DisplayBooksComponent } from './display-books/display-books.component';
@@ -21,6 +22,7 @@ const routes: Routes = [
   {path:'books', component:DashboardComponent},
   {path:'display', component:DisplayBooksComponent},
   { path: 'order', component: OrderSucessfulComponent },
+  {path: 'myorder', component: MyOrderComponent},
 
  
 
