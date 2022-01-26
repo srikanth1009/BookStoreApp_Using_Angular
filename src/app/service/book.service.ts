@@ -8,7 +8,7 @@ import { Book } from '../model/book';
   providedIn: 'root'
 })
 export class BookService {
-  [x: string]: any;
+
   baseUrl = environment.book_api;
   constructor(  private httpClient: HttpClient ) { }
   //get call
@@ -17,9 +17,9 @@ export class BookService {
     return this.httpClient.get(environment.book_api+'/getBooks');
   }
 
-  getBookById(bookId:any){
-return this.httpClient.get(environment.book_api+'/getBookDetailsByID/'+ bookId);
-}
+  getBookById(bookId: number):Observable<Book>{
+    return this.httpClient.get<Book>(`${this.baseUrl}/Book/${1}`);
+  }
 
 }
 

@@ -36,17 +36,6 @@ export class DashboardComponent implements OnInit {
       
   //   })
   // }
-  getBookDetails(){
  
-    this.bookservice.getBookById(this.bookId).subscribe((data) => {
-      console.log(data);
-    });
-
-}
-quickView(book:any){
-  localStorage.setItem('bookId', book.bookId);
-  
-  
-}
 
 }

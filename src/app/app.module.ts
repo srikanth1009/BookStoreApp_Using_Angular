@@ -26,6 +26,7 @@ import { CartComponent } from './component/cart/cart.component';
 import { WishlistComponent } from './component/wishlist/wishlist.component';
 import {MatListModule} from '@angular/material/list';
 import { OrderSucessfulComponent } from './order-sucessful/order-sucessful.component';
+import { WhishlistLoginSignupComponent } from './component/whishlist-login-signup/whishlist-login-signup.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,9 @@ import { OrderSucessfulComponent } from './order-sucessful/order-sucessful.compo
     DashboardComponent,
     DisplayBooksComponent,
     CartComponent,
-    WishlistComponent
+    WishlistComponent,
+    OrderSucessfulComponent,
+    WhishlistLoginSignupComponent
   ],
   imports: [
     BrowserModule,
