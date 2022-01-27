@@ -8,7 +8,10 @@ import { Book } from '../model/book';
   providedIn: 'root'
 })
 export class BookService {
-  [x: string]: any;
+  getBookDetails() {
+    throw new Error('Method not implemented.');
+  }
+
   baseUrl = environment.book_api;
   constructor(  private httpClient: HttpClient ) { }
   //get call
@@ -17,9 +20,9 @@ export class BookService {
     return this.httpClient.get(environment.book_api+'/getBooks');
   }
 
-  getBookById(bookId:any){
-return this.httpClient.get(environment.book_api+'/getBookDetailsByID/'+ bookId);
-}
+  getBookById(id: number):Observable<Book>{
+    return this.httpClient.get<Book>(`${this.baseUrl}/Book/${id}`);
+  }
 
 }
 

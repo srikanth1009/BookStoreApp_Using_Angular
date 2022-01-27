@@ -1,43 +1,40 @@
 <app-header></app-header>
+<div class="body">
 <div class="whole-div">
-    <div fxLayout="row" fxLayoutAlign="space-between center">
-      <div id="items">
-        Books
-        <span id="active"> (8items) </span>
-      </div>
-      </div>
+  <div fxLayout="row" fxLayoutAlign="space-between center">
+    <div id="items">
+      Books
+      <span id="active"> (3items) </span>
     </div>
-    <div
-    fxLayout="row wrap"
-    fxLayoutGap="16px grid"
-    >
-      <div style="margin: 0px;" fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%"  *ngFor="let item of bookList" >
-        <mat-card>
-          <div class="bookImageDiv" fxLayoutAlign="center">
-           <a href="display"> <img (click)="getBookDetails()" src="{{item.bookLogo}}"  /></a>
-            <!-- <mat-card class="centered" 
+  </div>
+</div>
+<div fxLayout="row wrap" fxLayoutGap="10px grid" class="maincard">
+  <div  style="margin: 0px;" fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" (click)="onClickBook(item.bookId)"
+    *ngFor="let item of bookList">
+    <mat-card >
+      <div class="bookImageDiv" fxLayoutAlign="center">
+        <img src="{{item.bookLogo}}" />
+        <!-- <mat-card class="centered" 
             >
             <p class="text">OUT OF STOCK</p>
             </mat-card
             > -->
-          </div>
-          <div class="bookInfoDiv" fxLayout="column">
-            <mat-card-content>
-              <div class="a">
-                <mat-card-title>{{item.bookName}}</mat-card-title>
-                <mat-card-subtitle>{{item.bookAuthor}}</mat-card-subtitle>
-              </div>
-              <div><img class="rating"src="../../assets/bookimages/rating.png"/></div><br>
-              <div class="price">Rs.{{item.bookPrice}}</div>
-            </mat-card-content>
-            <div class="left" fxLayout="row" fxLayoutAlign="space-around center">
-             
-            </div>
-          </div>
-        </mat-card>
-        
       </div>
-    </div>
- 
-  
- 
+      <div class="bookInfoDiv" fxLayout="column" >
+        <mat-card-content >
+          <div class="a">
+            <mat-card-title>{{item.bookName}}</mat-card-title>
+            <mat-card-subtitle>{{item.bookAuthor}}</mat-card-subtitle>
+          </div>
+          <div><img class="rating" src="../../assets/bookimages/rating.png" /></div><br>
+          <div class="price">Rs.{{item.bookPrice}}</div>
+        </mat-card-content>
+        <div class="left" fxLayout="row" fxLayoutAlign="space-around center">
+
+        </div>
+      </div>
+    </mat-card>
+
+  </div>
+</div>
+</div>

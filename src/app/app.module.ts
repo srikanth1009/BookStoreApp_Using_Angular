@@ -26,6 +26,8 @@ import { CartComponent } from './component/cart/cart.component';
 import { WishlistComponent } from './component/wishlist/wishlist.component';
 import {MatListModule} from '@angular/material/list';
 import { OrderSucessfulComponent } from './order-sucessful/order-sucessful.component';
+import { WhishlistLoginSignupComponent } from './component/whishlist-login-signup/whishlist-login-signup.component';
+import { MyOrderComponent } from './component/my-order/my-order.component';
 
 @NgModule({
   declarations: [
@@ -38,9 +40,13 @@ import { OrderSucessfulComponent } from './order-sucessful/order-sucessful.compo
     FooterComponent,
     DashboardComponent,
     DisplayBooksComponent,
+    OrderSucessfulComponent,
+    MyOrderComponent,
     CartComponent,
     WishlistComponent,
-    OrderSucessfulComponent
+    OrderSucessfulComponent,
+    WhishlistLoginSignupComponent,
+   
   ],
   imports: [
     BrowserModule,
@@ -70,5 +76,6 @@ import { OrderSucessfulComponent } from './order-sucessful/order-sucessful.compo
 
   providers: [],
   bootstrap: [AppComponent]
+
 })
 export class AppModule { }
