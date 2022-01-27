@@ -8,10 +8,10 @@
     </div>
   </div>
 </div>
-<div fxLayout="row wrap" fxLayoutGap="10px grid" class="maincard">
-  <div  style="margin: 0px;" fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" (click)="onClickBook(item.bookId)"
+<div fxLayout="row wrap" fxLayoutGap="5px grid" class="maincard">
+  <div  style="margin: 0px;" fxFlex="25%" (click)="onClickBook(item.bookId)"
     *ngFor="let item of bookList">
-    <mat-card >
+    <mat-card class="mainvalue">
       <div class="bookImageDiv" fxLayoutAlign="center">
         <img src="{{item.bookLogo}}" />
         <!-- <mat-card class="centered" 
@@ -38,5 +38,3 @@
   </div>
 </div>
 </div>
-
-

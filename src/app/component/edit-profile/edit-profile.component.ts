@@ -7,9 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditProfileComponent implements OnInit {
   public hide:boolean=true;
-  // profile:string=localStorage.getItem('image');
-  // fullName:string=localStorage.getItem('username');
-  password:string="Anant";
+  
+  
   constructor() { }
 
   ngOnInit(): void {

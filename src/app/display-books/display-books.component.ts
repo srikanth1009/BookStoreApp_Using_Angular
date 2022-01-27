@@ -11,7 +11,7 @@ import { BookService } from '../service/book.service';
   styleUrls: ['./display-books.component.scss']
 })
 export class DisplayBooksComponent implements OnInit {
-  
+
   book:any;
   bookList:Book[]=[];
 
@@ -25,10 +25,11 @@ export class DisplayBooksComponent implements OnInit {
 
   getSingleBook(){
 
-    this.bookservice.getBookById(this.id).subscribe(
-      data=>{ 
-      console.log(data);
-      this.book=data;
+    this.bookservice.getBookById(this.id).subscribe(data=>{ 
+        this.book=data;
+        console.log(data);
+        console.log( this.book );
+  
       },
       error=>{ console.log(error)},
     );
