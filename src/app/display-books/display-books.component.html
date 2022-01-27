@@ -9,18 +9,19 @@
     </div>
     <div class="container">
 
-        <div class="list-books">
+        <div class="list-books"  >
             <div class="homebutton" routerLink="/books">
                 <button style="border: 0ch;">Home</button>
                 / Book(01)
             </div>
           
-            <div class="col-sm-4 column p-3" *ngFor="let item of bookList">
-                <div></div>
-                <mat-card style="height: 22.5em; width: 220px;  margin-right: 40px; " class="tooltip1">
+            <div class="col-sm-4 column p-3" >
+                <div>
+            
+                <mat-card style="height: 22.5em; width: 220px;  margin-right: 40px; "  class="tooltip1">
 
                     <mat-card-title matTooltip="Book Image">
-                        <img src="{{item.bookLogo}}" style="height: 250px; width: 300px;
+                        <img src="{{model.bookLogo}}" style="height: 250px; width: 300px;
                       margin-left: 15px; margin-right: 50px; padding-top: 20px; padding-bottom: 20px; " />
 
                     </mat-card-title>
@@ -60,12 +61,12 @@
                 </mat-card>
                 <div class="bookdetils">
                     <span class="tooltiptext">
-                        <div class="bookname ">{{item.bookName}}</div>
-                        <div class="authorname ">{{item.bookAuthor}}</div>
+                        <div class="bookname ">{{model.bookName}}</div>
+                        <div class="authorname ">{{model.bookAuthor}}</div>
                         <div><img src="../../assets/bookimages/rating.png"></div>
 
                         <div class="price ">
-                            <h2>Rs.{{item.bookPrice}}</h2>
+                            <h2>Rs.{{model.bookPrice}}</h2>
                             <div class="actualprice">
                                 <h5>Rs.2000</h5>
                             </div>
@@ -73,7 +74,7 @@
                         </div>
                         <div class="bookdetail">
                             <h2 style="text-align: left; padding-left: 10px;">.Book Detail</h2>
-                            <p>{{item.bookDescription}} </p>
+                            <p>{{model.bookDescription}} </p>
                             <hr>
                         </div>
                         <h3>Customer feedback</h3>
@@ -91,9 +92,8 @@
                         </div>
                     </span>
                 </div>
-
-
             </div>
+        </div>
         </div>
     </div>
 

@@ -12,31 +12,24 @@ import { BookService } from '../service/book.service';
 })
 export class DisplayBooksComponent implements OnInit {
 
-  registerForm!:FormGroup;
-  submitted=false;
-  user:any;
-  book:any;
+  // registerForm!:FormGroup;
+  // submitted=false;
+  // user:any;
+  // book:any;
   bookList:Book[]=[];
-  bookId:any;
+
+ id!:number;
+ model: Book = new Book();
   constructor( private route:ActivatedRoute, private bookservice: BookService ) { }
-
-  ngOnInit() {
-    this.bookId
-
-//get
-this.bookservice.getBooks().subscribe( data => { 
-  this.book=data;
-  this.bookList=this.book.data;
-    console.log(this.bookList);
-
-     });
-  
+  ngOnInit(): void {
+    this.id = this.route.snapshot.params['id'];
+    this.getSingleBook();
   }
-   getBookDetails(bookId:number){
- 
-    this.bookservice.getBookById(bookId).subscribe((data) => {
-      console.log(data);
-    });
 
-}
+  getSingleBook(){
+    this.bookservice.getBookById(this.id).subscribe(
+      data=>{ this.model = data },
+      error=>{ console.log(error)}
+    );
+  }
 }

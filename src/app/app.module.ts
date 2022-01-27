@@ -45,7 +45,8 @@ import { MyOrderComponent } from './component/my-order/my-order.component';
     CartComponent,
     WishlistComponent,
     OrderSucessfulComponent,
-    WhishlistLoginSignupComponent
+    WhishlistLoginSignupComponent,
+   
   ],
   imports: [
     BrowserModule,
@@ -75,6 +76,6 @@ import { MyOrderComponent } from './component/my-order/my-order.component';
 
   providers: [],
   bootstrap: [AppComponent]
-  
+
 })
 export class AppModule { }

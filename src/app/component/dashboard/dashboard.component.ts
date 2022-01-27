@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Book } from 'src/app/model/book';
 import { BookService } from 'src/app/service/book.service';
 
@@ -14,9 +15,8 @@ export class DashboardComponent implements OnInit {
   submitted=false;
   book:any;
   bookList:Book[]=[];
-  bookId:any;
-
- constructor(private bookservice: BookService ){}
+ 
+ constructor(private bookservice: BookService , private router: Router ){}
  ngOnInit(){
    //get
    this.bookservice.getBooks().subscribe( data => { 
@@ -36,6 +36,8 @@ export class DashboardComponent implements OnInit {
       
   //   })
   // }
- 
+  onClickBook(id:number) {
+    this.router.navigate([`display/${id}`]);
+  }
 
 }

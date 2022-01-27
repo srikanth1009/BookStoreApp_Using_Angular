@@ -1,10 +1,10 @@
-export interface Book{
+export class Book{
    
-    bookId: number;
-    bookName:String;
-    bookAuthor: String;
-    bookDescription: String;
-    bookLogo:string;
-    bookPrice:number;
+    bookId !: number ;
+    bookName:String | undefined;
+    bookAuthor: String | undefined;
+    bookDescription: String | undefined;
+    bookLogo:string | undefined;
+    bookPrice:number | undefined;
     
 }

@@ -23,7 +23,7 @@ const routes: Routes = [
   { path: '' , redirectTo: 'signupform', pathMatch: 'full'},
   {path:'forgot', component:ForgotPasswordComponent},
   {path:'books', component:DashboardComponent},
-  {path:'display', component:DisplayBooksComponent},
+  {path:'display/:id', component:DisplayBooksComponent},
   
   {path: 'myorder', component: MyOrderComponent},
   {path:'cart',component:CartComponent},
