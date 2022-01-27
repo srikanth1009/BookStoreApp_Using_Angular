@@ -20,8 +20,8 @@ export class BookService {
     return this.httpClient.get(environment.book_api+'/getBooks');
   }
 
-  getBookById(id: number):Observable<Book>{
-    return this.httpClient.get<Book>(`${this.baseUrl}/Book/${id}`);
+  getBookById(id: number){
+    return this.httpClient.get(`${this.baseUrl}/Book/${id}`);
   }
 
 }
