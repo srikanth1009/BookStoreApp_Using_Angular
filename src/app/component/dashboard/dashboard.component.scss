@@ -171,6 +171,13 @@ opacity: 1;
   }
   
   .maincard{
+     display: flex;
+     flex-direction: row;
+     justify-content: left;
+     align-items: center;
+     padding-right: 13%;
+     padding-left: 14%;
+     padding-top: 2%;
    margin-left: 20px;
   }
  
