@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CartComponent } from './component/cart/cart.component';
 
 import { DashboardComponent } from './component/dashboard/dashboard.component';
+import { EditProfileComponent } from './component/edit-profile/edit-profile.component';
 import { ForgotPasswordComponent } from './component/forgot-password/forgot-password.component';
 import { HeaderComponent } from './component/header/header.component';
 import { LoginComponent } from './component/login/login.component';
@@ -24,7 +25,7 @@ const routes: Routes = [
   {path:'forgot', component:ForgotPasswordComponent},
   {path:'books', component:DashboardComponent},
   {path:'display/:id', component:DisplayBooksComponent},
-  
+  {path:'profile', component:EditProfileComponent},
   {path: 'myorder', component: MyOrderComponent},
   {path:'cart',component:CartComponent},
   {path:'wishlist',component:WishlistComponent},

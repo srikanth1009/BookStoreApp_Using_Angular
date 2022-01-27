@@ -28,6 +28,7 @@ import {MatListModule} from '@angular/material/list';
 import { OrderSucessfulComponent } from './order-sucessful/order-sucessful.component';
 import { WhishlistLoginSignupComponent } from './component/whishlist-login-signup/whishlist-login-signup.component';
 import { MyOrderComponent } from './component/my-order/my-order.component';
+import { EditProfileComponent } from './component/edit-profile/edit-profile.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { MyOrderComponent } from './component/my-order/my-order.component';
     WishlistComponent,
     OrderSucessfulComponent,
     WhishlistLoginSignupComponent,
+    EditProfileComponent,
    
   ],
   imports: [
