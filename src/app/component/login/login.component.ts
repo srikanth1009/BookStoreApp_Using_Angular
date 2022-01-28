@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
+import { User } from 'src/app/model/user';
 import { Token } from 'src/app/model/token';
 import { UserService } from 'src/app/service/user.service';
 
@@ -47,7 +48,7 @@ export class LoginComponent implements OnInit {
      
     };
     this.userService.userlogin(newformData).subscribe((data: any) =>
-      console.log((data),this.fetchtoken=data,localStorage.setItem( "token", this['fetchedToken'].token))
+      console.log((data),this.fetchtoken=data,localStorage.setItem( 'data', this['fetchedToken'].token))
     );
     this.router.navigateByUrl("/books");
 }

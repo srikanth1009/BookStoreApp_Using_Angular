@@ -30,6 +30,9 @@ import { WhishlistLoginSignupComponent } from './component/whishlist-login-signu
 import { MyOrderComponent } from './component/my-order/my-order.component';
 import { EditProfileComponent } from './component/edit-profile/edit-profile.component';
 import { AuthGuard } from './service/auth.guard';
+import { MatDialog } from '@angular/material/dialog';
+import { Token } from './model/token';
+import { User } from './model/user';
 
 @NgModule({
   declarations: [
@@ -79,7 +82,7 @@ import { AuthGuard } from './service/auth.guard';
   
     ],
 
-  providers: [AuthGuard],
+  providers: [AuthGuard , MatDialog, User],
   bootstrap: [AppComponent]
 
 })
