@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
+import { User } from 'src/app/model/user';
 import { UserService } from 'src/app/service/user.service';
 
 @Component({
@@ -18,7 +19,8 @@ export class LoginComponent implements OnInit {
     emailId: string ='';
     password: string = '';
    
-  // user:any;
+  //   model:User = new User();
+  // // user:any;
   signupForm:any;
   constructor(  private formBuilder: FormBuilder, private userService: UserService,   private router: Router,  private matSnakeBar: MatSnackBar) {
     this.signupForm = formBuilder.group({
@@ -28,7 +30,10 @@ export class LoginComponent implements OnInit {
      
     });
    }
-   ngOnInit(): void {}
+   ngOnInit(): void {
+    //  console.log(this.model);
+     
+   }
    PostData(signupForm: any) {
      console.log(signupForm.controls);
    }

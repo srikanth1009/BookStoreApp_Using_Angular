@@ -35,4 +35,16 @@ export class DisplayBooksComponent implements OnInit {
     );
   }
   
+
+  // AddToBag(book: any) {
+  //   console.log(book);
+  //   this.cartService.addCartDetails(book).subscribe(data =>{
+  //     console.log("post",data);
+  //     this.matSnackBar.open('Book is added successfully to Cart ' , 'ok', {
+  //       duration: 3000
+  //     });
+  //     this.router.navigateByUrl("/books"); 
+  //   })
+  // }
+  
 }
