@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { FortgotPassword } from '../model/forgot-password';
 import { ResetPassword } from '../model/reset-password';
-import { User } from '../model/user';
+
 
 
 @Injectable({

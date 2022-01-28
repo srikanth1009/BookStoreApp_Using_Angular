@@ -12,7 +12,7 @@ import { UserService } from 'src/app/service/user.service';
 })
 export class SignupComponent implements OnInit {
   public showPassword: boolean | undefined;
-  fetchtoken:Token=new Token();
+
   // public showPassword: boolean = false;
   showDetails: boolean | undefined;
   [x: string]: any;
@@ -65,7 +65,7 @@ addLogin() {
    
   };
   this.userService.userlogin(newformData).subscribe((data: any) =>
-    console.log((data),this.fetchtoken=data,localStorage.setItem( "token", this['fetchedToken'].token), localStorage.setItem("name", this['fetchedToken'].personName))
+    console.log((data),localStorage.setItem('token', JSON.stringify(data)))
   );
 }
 
