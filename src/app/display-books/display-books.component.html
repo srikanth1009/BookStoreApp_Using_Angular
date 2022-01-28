@@ -3,97 +3,98 @@
 <div class="main-container"><br><br>
     <div class="inputs" style="    margin-left: 1032px;">
         <select id="select_baseUrl" name="select_baseUrl">
-            <option >Sort by relevance</option>
-        </select><input id="input_baseUrl" name="baseUrl" type="text"
-            style="display: none;">
+            <option>Sort by relevance</option>
+        </select><input id="input_baseUrl" name="baseUrl" type="text" style="display: none;">
     </div>
     <div class="container">
 
-        <div class="list-books"  >
-            <div class="homebutton" routerLink="/books">
-                <button style="border: 0ch;">Home</button>
+        <div class="list-books">
+            <div class="homebutton">
+                <a href="books">
+                    <span style="border: 0ch;">Home</span></a>
                 / Book(01)
             </div>
-          
-            <div class="col-sm-4 column p-3"  >
-                <div>
-            
-                <mat-card style="height: 22.5em; width: 220px;  margin-right: 40px; "  class="tooltip1">
 
-                    <mat-card-title matTooltip="Book Image">
-                        <img src=" {{book?.data.bookLogo}} "  style="height: 250px; width: 300px;
+            <div class="col-sm-4 column p-3">
+                <div>
+
+                    <mat-card style="height: 22.5em; width: 220px;  margin-right: 40px; " class="tooltip1">
+
+                        <mat-card-title matTooltip="Book Image">
+                            <img src=" {{book?.data.bookLogo}} " style="height: 250px; width: 300px;
                       margin-left: 15px; margin-right: 50px; padding-top: 20px; padding-bottom: 20px; " />
 
-                    </mat-card-title>
-                   
-                    <mat-card-content style="width: 16em; ">
-                        <!-- <div class="out-of-stock ">Out Of stock</div> -->
+                        </mat-card-title>
 
-                        <!-- <div class="availablity " style="color: rgb(163, 43, 6); ">
+                        <mat-card-content style="width: 16em; ">
+                            <!-- <div class="out-of-stock ">Out Of stock</div> -->
+
+                            <!-- <div class="availablity " style="color: rgb(163, 43, 6); ">
                             Only 2 left hurry up
                         </div> -->
-                        <ng-template #elsecondition>
-                            <div class="availablity " style="color: rgb(2, 110, 2); ">
-                                Available Books: 4
-                            </div>
-                            <div style="height: 26px; "></div>
-                        </ng-template>
-                        <div class="cart-buttons ">
-                            <div>
-                                <button class="addtobag " #clickState mat-button routerLink="/cart">ADD TO BAG</button>
-                            </div>
-                            <div>
+                            <ng-template #elsecondition>
+                                <div class="availablity " style="color: rgb(2, 110, 2); ">
+                                    Available Books: 4
+                                </div>
+                                <div style="height: 26px; "></div>
+                            </ng-template>
+                            <div class="cart-buttons ">
+                                <div>
+                                    <button class="addtobag " #clickState mat-button routerLink="/cart">ADD TO
+                                        BAG</button>
+                                </div>
+                                <div>
 
-                                <button style="border: 1px solid white;
+                                    <button style="border: 1px solid white;
                               outline: none;
                               width: 95px;
                               height: 35px;
                               background-color: grey;
-                              border-radius: 3px; ;">WISHLIST</button>
+                              border-radius: 3px; ;" routerLink="/wishlist">WISHLIST</button>
+
+                                </div>
 
                             </div>
 
-                        </div>
 
+                        </mat-card-content>
 
-                    </mat-card-content>
+                    </mat-card>
+                    <div class="bookdetils">
+                        <span class="tooltiptext">
+                            <div class="bookname ">{{book?.data.bookName}}</div>
+                            <div class="authorname ">{{book?.data.bookAuthor}}</div>
+                            <div><img src="../../assets/bookimages/rating.png"></div>
 
-                </mat-card>
-                <div class="bookdetils">
-                    <span class="tooltiptext">
-                        <div class="bookname ">{{book?.data.bookName}}</div>
-                        <div class="authorname ">{{book?.data.bookAuthor}}</div>
-                        <div><img src="../../assets/bookimages/rating.png"></div>
-
-                        <div class="price ">
-                            <h2>Rs.{{book?.data.bookPrice}}</h2>
-                            <div class="actualprice">
-                                <h5>Rs.2000</h5>
+                            <div class="price ">
+                                <h2>Rs.{{book?.data.bookPrice}}</h2>
+                                <div class="actualprice">
+                                    <h5>Rs.2000</h5>
+                                </div>
+                                <hr>
                             </div>
-                            <hr>
-                        </div>
-                        <div class="bookdetail">
-                            <h2 style="text-align: left; padding-left: 10px;">.Book Detail</h2>
-                            <p>{{book?.data.bookDescription}} </p>
-                            <hr>
-                        </div>
-                        <h3>Customer feedback</h3>
-                        <div class="feedback">
-                            
-                            <span class="rating">Overall rating</span><br>
-                            <mat-icon>star_border</mat-icon>
-                            <mat-icon>star_border</mat-icon>
-                            <mat-icon>star_border</mat-icon>
-                            <mat-icon>star_border</mat-icon><br>
+                            <div class="bookdetail">
+                                <h2 style="text-align: left; padding-left: 10px;">.Book Detail</h2>
+                                <p>{{book?.data.bookDescription}} </p>
+                                <hr>
+                            </div>
+                            <h3>Customer feedback</h3>
+                            <div class="feedback">
 
-                            <input class="input" placeholder="Write your review" type="text"><br>
-                            <button class="submitbuuton">Sumbit</button>
+                                <span class="rating">Overall rating</span><br>
+                                <mat-icon>star_border</mat-icon>
+                                <mat-icon>star_border</mat-icon>
+                                <mat-icon>star_border</mat-icon>
+                                <mat-icon>star_border</mat-icon><br>
 
-                        </div>
-                    </span>
+                                <input class="input" placeholder="Write your review" type="text"><br>
+                                <button class="submitbuuton">Sumbit</button>
+
+                            </div>
+                        </span>
+                    </div>
                 </div>
             </div>
-        </div>
         </div>
     </div>
 

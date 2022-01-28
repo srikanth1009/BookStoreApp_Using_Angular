@@ -1,29 +1,34 @@
+<div>
+
 <app-header></app-header>
-<div class="body">
- 
-<div class="whole-div">
-  
-  <div fxLayout="row" fxLayoutAlign="space-between center">
-    <div id="items">
-      Books
-      <span id="active"> (5items) </span>
-    </div>
+<div fxLayout="row" fxLayoutAlign="space-between center">
+  <div id="items">
+    Books
+    <span id="active"> (5items) </span>
   </div>
+</div>
+<div class="body" >
+  
+<div class="whole-div">
+  <div class="inputs" style="       margin-left: 909px;
+  margin-top: -46px;">
+    <select id="select_baseUrl" name="select_baseUrl">
+        <option >Sort by relevance</option>
+    </select><input id="input_baseUrl" name="baseUrl" type="text"
+        style="display: none;">
+</div>
+ 
 </div>
 <div fxLayout="row wrap" fxLayoutGap="5px grid" class="maincard">
   <div  style="margin: 0px;" fxFlex="25%" (click)="onClickBook(item.bookId)"
-    *ngFor="let item of bookList">
+    *ngFor="let item of bookList" >
     <mat-card class="mainvalue">
       <div class="bookImageDiv" fxLayoutAlign="center">
         <img src="{{item.bookLogo}}" />
-        <!-- <mat-card class="centered" 
-            >
-            <p class="text">OUT OF STOCK</p>
-            </mat-card
-            > -->
+        
       </div>
       <div class="bookInfoDiv" fxLayout="column" >
-        <mat-card-content >
+        <mat-card-content class="matcard" >
           <div class="a">
             <mat-card-title>{{item.bookName}}</mat-card-title>
             <mat-card-subtitle>{{item.bookAuthor}}</mat-card-subtitle>

@@ -13,15 +13,14 @@ import { UserService } from 'src/app/service/user.service';
 })
 export class LoginComponent implements OnInit {
  //Method for login
- fetchtoken:Token=new Token();
+
   [x: string]: any;
   hide: boolean = true;
     // Id  : number,
     emailId: string ='';
     password: string = '';
-   
-  //   model:User = new User();
-  // // user:any;
+ 
+  // user:any;
   signupForm:any;
   constructor(  private formBuilder: FormBuilder, private userService: UserService,   private router: Router,  private matSnakeBar: MatSnackBar) {
     this.signupForm = formBuilder.group({
@@ -47,8 +46,7 @@ export class LoginComponent implements OnInit {
      
      
     };
-    this.userService.userlogin(newformData).subscribe((data: any) =>
-      console.log((data),this.fetchtoken=data,localStorage.setItem( 'data', this['fetchedToken'].token))
+    this.userService.userlogin(newformData).subscribe(data=>(console.log(data),  localStorage.setItem('token', JSON.stringify(data)))
     );
     this.router.navigateByUrl("/books");
 }
