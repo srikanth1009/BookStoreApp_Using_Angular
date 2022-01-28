@@ -29,6 +29,7 @@ import { OrderSucessfulComponent } from './order-sucessful/order-sucessful.compo
 import { WhishlistLoginSignupComponent } from './component/whishlist-login-signup/whishlist-login-signup.component';
 import { MyOrderComponent } from './component/my-order/my-order.component';
 import { EditProfileComponent } from './component/edit-profile/edit-profile.component';
+import { AuthGuard } from './service/auth.guard';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { EditProfileComponent } from './component/edit-profile/edit-profile.comp
     OrderSucessfulComponent,
     WhishlistLoginSignupComponent,
     EditProfileComponent,
+    
    
   ],
   imports: [
@@ -66,7 +68,8 @@ import { EditProfileComponent } from './component/edit-profile/edit-profile.comp
     MatIconModule,
     MatGridListModule,
     FlexLayoutModule,
-    MatListModule
+    MatListModule,
+    
 
 
     // MatFormFieldModule,
@@ -76,7 +79,7 @@ import { EditProfileComponent } from './component/edit-profile/edit-profile.comp
   
     ],
 
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 
 })
