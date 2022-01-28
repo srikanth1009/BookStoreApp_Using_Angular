@@ -14,16 +14,17 @@ import { WhishlistLoginSignupComponent } from './component/whishlist-login-signu
 import { WishlistComponent } from './component/wishlist/wishlist.component';
 import { DisplayBooksComponent } from './display-books/display-books.component';
 import { OrderSucessfulComponent } from './order-sucessful/order-sucessful.component';
+import { AuthGuard } from './service/auth.guard';
 
 const routes: Routes = [
   // {path:'', component:LoginComponent},
   // {path:'', component:SignupComponent},
   {path:'loginform', component:LoginComponent},
-  {path:'signupform', component:SignupComponent},
+  {path:'signupform', component:SignupComponent },
   { path: 'reset/:token', component: ResetComponent},
-  { path: '' , redirectTo: 'signupform', pathMatch: 'full'},
+  { path: '' , redirectTo: 'signupform', pathMatch: 'full' },
   {path:'forgot', component:ForgotPasswordComponent},
-  {path:'books', component:DashboardComponent},
+  {path:'books', component:DashboardComponent, canActivate: [AuthGuard]},
   {path:'display/:id', component:DisplayBooksComponent},
   {path:'profile', component:EditProfileComponent},
   {path: 'myorder', component: MyOrderComponent},
@@ -40,5 +41,6 @@ const routes: Routes = [
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
+  
 })
 export class AppRoutingModule { }

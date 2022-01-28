@@ -11,7 +11,7 @@ import { BookService } from 'src/app/service/book.service';
 })
 export class DashboardComponent implements OnInit {
 
-  registerForm!:FormGroup;
+ 
   submitted=false;
   book:any;
   bookList:Book[]=[];
@@ -26,9 +26,9 @@ export class DashboardComponent implements OnInit {
 
         });
   }
-    get f(){
-    return this.registerForm.controls;
-  }
+  //   get f(){
+  //   return this.registerForm.controls;
+  // }
   // getOne(){
   //   this.bookservice.getOne(this.bookId).subscribe( data => { 
   //     // this.data = data;
