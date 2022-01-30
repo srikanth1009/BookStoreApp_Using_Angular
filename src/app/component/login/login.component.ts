@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
+import { User } from 'src/app/model/user';
+import { Token } from 'src/app/model/token';
 import { UserService } from 'src/app/service/user.service';
 
 @Component({
@@ -11,13 +13,13 @@ import { UserService } from 'src/app/service/user.service';
 })
 export class LoginComponent implements OnInit {
  //Method for login
- 
+
   [x: string]: any;
   hide: boolean = true;
     // Id  : number,
     emailId: string ='';
     password: string = '';
-   
+ 
   // user:any;
   signupForm:any;
   constructor(  private formBuilder: FormBuilder, private userService: UserService,   private router: Router,  private matSnakeBar: MatSnackBar) {
@@ -28,7 +30,10 @@ export class LoginComponent implements OnInit {
      
     });
    }
-   ngOnInit(): void {}
+   ngOnInit(): void {
+    //  console.log(this.model);
+     
+   }
    PostData(signupForm: any) {
      console.log(signupForm.controls);
    }
@@ -41,8 +46,7 @@ export class LoginComponent implements OnInit {
      
      
     };
-    this.userService.userlogin(newformData).subscribe((data: any) =>
-      console.log((data))
+    this.userService.userlogin(newformData).subscribe(data=>(console.log(data),  localStorage.setItem('token', JSON.stringify(data)))
     );
     this.router.navigateByUrl("/books");
 }

@@ -28,6 +28,11 @@ import {MatListModule} from '@angular/material/list';
 import { OrderSucessfulComponent } from './order-sucessful/order-sucessful.component';
 import { WhishlistLoginSignupComponent } from './component/whishlist-login-signup/whishlist-login-signup.component';
 import { MyOrderComponent } from './component/my-order/my-order.component';
+import { EditProfileComponent } from './component/edit-profile/edit-profile.component';
+import { AuthGuard } from './service/auth.guard';
+import { MatDialog } from '@angular/material/dialog';
+import { Token } from './model/token';
+import { User } from './model/user';
 
 @NgModule({
   declarations: [
@@ -46,6 +51,8 @@ import { MyOrderComponent } from './component/my-order/my-order.component';
     WishlistComponent,
     OrderSucessfulComponent,
     WhishlistLoginSignupComponent,
+    EditProfileComponent,
+    
    
   ],
   imports: [
@@ -64,7 +71,8 @@ import { MyOrderComponent } from './component/my-order/my-order.component';
     MatIconModule,
     MatGridListModule,
     FlexLayoutModule,
-    MatListModule
+    MatListModule,
+    
 
 
     // MatFormFieldModule,
@@ -74,7 +82,7 @@ import { MyOrderComponent } from './component/my-order/my-order.component';
   
     ],
 
-  providers: [],
+  providers: [AuthGuard , MatDialog, User],
   bootstrap: [AppComponent]
 
 })

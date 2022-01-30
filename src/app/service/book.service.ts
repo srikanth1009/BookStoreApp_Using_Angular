@@ -16,12 +16,12 @@ export class BookService {
   constructor(  private httpClient: HttpClient ) { }
   //get call
   
-  getBooks(){
-    return this.httpClient.get(environment.book_api+'/getBooks');
+  
+  getBooks() {
+    return this.httpClient.get<[Book]>(`${this.baseUrl}/getBooks`);
   }
-
-  getBookById(id: number):Observable<Book>{
-    return this.httpClient.get<Book>(`${this.baseUrl}/Book/${id}`);
+  getBookById(id: number){
+    return this.httpClient.get(`${this.baseUrl}/Book/${id}`);
   }
 
 }

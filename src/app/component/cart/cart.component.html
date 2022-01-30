@@ -2,17 +2,18 @@
 
 <div class="home-mycart">
   <a href="books">
-  <h4 class="home">Home </h4>
-</a>
+    <h4 class="home">Home </h4>
+  </a>
   <h4 class="mycart">/Mycart</h4>
 </div>
-<div class="card1">
-  <h2 class="h2mycart">Mycart()</h2>
-  <img src="../../../assets/bookimages/Image 20.png">
+<div class="card1" >
+  <h2 class="h2mycart" >Mycart()</h2>
+  <div *ngFor="let book of cartList">
+  <img src="{{book.bookLogo}}" >
   <div class="card1form">
-    <h4 class="card1name">Don't Make Me Think</h4>
-    <h4 class="card1author">by Steve Krug</h4>
-    <h4 class="card1price">Rs.400</h4>
+    <h4 class="card1name">{{book.bookName}}</h4>
+    <h4 class="card1author">{{book.bookAuthor}}</h4>
+    <h4 class="card1price">{{book.bookPrice}}</h4>
     <div class="increment">
       <button class="add" type="button" (click)="dicrement()">-</button>
       <input type="text" id="counter" value="{{counter}}" style="width: 16px;margin-left: -10px;margin-right: 5px;">
@@ -20,6 +21,7 @@
     </div>
     <button class="btncontinue" style="margin-left: 400px;" type="button" routerLink="/order">PlaceOrder</button>
   </div>
+</div>
 </div>
 <div class="card2">
   <mat-expansion-panel hideToggle>
@@ -80,11 +82,11 @@
         </div>
 
       </div>
-      
+
       <button class="btncontinue" type="button">Continue</button>
     </form>
   </mat-expansion-panel>
- 
+
 </div>
 <div class="card3">
   <mat-expansion-panel hideToggle>
@@ -94,12 +96,13 @@
       </mat-panel-title>
     </mat-expansion-panel-header>
     <img src="../../../assets/bookimages/Image 20.png">
-  <div class="card1form">
-    <h4 class="card1name">Don't Make Me Think</h4>
-    <h4 class="card1author">by Steve Krug</h4>
-    <h4 class="card1price">Rs.400</h4>
-  </div>
-  <button class="btncontinue" style="margin-left: 510px;" type="button">Checkout</button>
+    <div class="card1form">
+      <h4 class="card1name">Don't Make Me Think</h4>
+      <h4 class="card1author">by Steve Krug</h4>
+      <h4 class="card1price">Rs.400</h4>
+    </div>
+    <button class="btncontinue" style="margin-left: 510px;" type="button">Checkout</button>
 
-  </mat-expansion-panel>  
+  </mat-expansion-panel>
+  
 </div>

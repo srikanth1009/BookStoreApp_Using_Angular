@@ -1,7 +1,10 @@
+import { Token } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
+import { User } from 'src/app/model/user';
+
 import { UserService } from 'src/app/service/user.service';
 
 @Component({
@@ -10,8 +13,10 @@ import { UserService } from 'src/app/service/user.service';
   styleUrls: ['./signup.component.scss']
 })
 export class SignupComponent implements OnInit {
+
+  model:User = new User();
   public showPassword: boolean | undefined;
-  
+
   // public showPassword: boolean = false;
   showDetails: boolean | undefined;
   [x: string]: any;
@@ -48,12 +53,15 @@ export class SignupComponent implements OnInit {
       console.log((data))
     );
     this.router.navigateByUrl("/loginform");
+   
 }
 // public togglePasswordVisibility(): void {
 //   this.showPassword = !this.showPassword;
 // }
 onStrengthChanged(strength: number) {
   console.log('password strength = ', strength);
+  
+  
 }
 addLogin() {
   const newformData = {
@@ -64,8 +72,9 @@ addLogin() {
    
   };
   this.userService.userlogin(newformData).subscribe((data: any) =>
-    console.log((data))
+    console.log((data),localStorage.setItem('token', JSON.stringify(data)))
   );
 }
+
 
 }
