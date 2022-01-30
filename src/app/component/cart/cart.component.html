@@ -6,9 +6,10 @@
   </a>
   <h4 class="mycart">/Mycart</h4>
 </div>
-<div class="card1" *ngFor="let book of cartList">
-  <h2 class="h2mycart">Mycart()</h2>
-  <img src="{{book.bookLogo}}">
+<div class="card1" >
+  <h2 class="h2mycart" >Mycart()</h2>
+  <div *ngFor="let book of cartList">
+  <img src="{{book.bookLogo}}" >
   <div class="card1form">
     <h4 class="card1name">{{book.bookName}}</h4>
     <h4 class="card1author">{{book.bookAuthor}}</h4>
@@ -20,6 +21,7 @@
     </div>
     <button class="btncontinue" style="margin-left: 400px;" type="button" routerLink="/order">PlaceOrder</button>
   </div>
+</div>
 </div>
 <div class="card2">
   <mat-expansion-panel hideToggle>
