@@ -6,13 +6,13 @@
   </a>
   <h4 class="mycart">/Mycart</h4>
 </div>
-<div class="card1">
+<div class="card1" *ngFor="let book of cartList">
   <h2 class="h2mycart">Mycart()</h2>
-  <img src="../../../assets/bookimages/Image 20.png">
+  <img src="{{book.bookLogo}}">
   <div class="card1form">
-    <h4 class="card1name">Don't Make Me Think</h4>
-    <h4 class="card1author">by Steve Krug</h4>
-    <h4 class="card1price">Rs.400</h4>
+    <h4 class="card1name">{{book.bookName}}</h4>
+    <h4 class="card1author">{{book.bookAuthor}}</h4>
+    <h4 class="card1price">{{book.bookPrice}}</h4>
     <div class="increment">
       <button class="add" type="button" (click)="dicrement()">-</button>
       <input type="text" id="counter" value="{{counter}}" style="width: 16px;margin-left: -10px;margin-right: 5px;">

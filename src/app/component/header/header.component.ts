@@ -17,6 +17,9 @@ export class HeaderComponent implements OnInit {
     localStorage.removeItem("token");
     this.router.navigateByUrl("/signupform");
   }
+  getCartDetails(){
+    this.router.navigateByUrl("/cart");
+  }
 
 toogleTag(){
   this.showMe=!this.showMe
