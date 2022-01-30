@@ -34,6 +34,7 @@ export class DisplayBooksComponent implements OnInit {
       error=>{ console.log(error)},
     );
   }
+ 
   
 
   // AddToBag(book: any) {
