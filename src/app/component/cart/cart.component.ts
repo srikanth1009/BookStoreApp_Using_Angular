@@ -30,7 +30,7 @@ export class CartComponent implements OnInit {
     console.log("CART",data);
     this.cartList = data.data;
     console.log(this.book);
-    // this.cartListLength = this.cartList.length;
+   
   });
   }
   counter = 1;

@@ -46,8 +46,11 @@ export class LoginComponent implements OnInit {
      
      
     };
+    
+
     this.userService.userlogin(newformData).subscribe(data=>(console.log(data),  localStorage.setItem('token', JSON.stringify(data)))
     );
     this.router.navigateByUrl("/books");
 }
+
 }

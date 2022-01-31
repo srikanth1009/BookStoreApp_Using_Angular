@@ -42,5 +42,9 @@ export class UserService {
     resetUserPassword(token:string, resetpassword:ResetPassword):Observable<Object>{
       return this.http.post(`${this.baseUrl}/resetpassword/${token}`, resetpassword);
     }
+    isLoggedIn() {
+      return !!localStorage.getItem('token');
+    }
+  
   }
    
