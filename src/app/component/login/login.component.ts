@@ -6,12 +6,15 @@ import { User } from 'src/app/model/user';
 import { Token } from 'src/app/model/token';
 import { UserService } from 'src/app/service/user.service';
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
+
+public tok:Token=new Token;
  //Method for login
 
   [x: string]: any;
@@ -32,12 +35,15 @@ export class LoginComponent implements OnInit {
    }
    ngOnInit(): void {
     //  console.log(this.model);
+    
      
    }
    PostData(signupForm: any) {
      console.log(signupForm.controls);
    }
 
+  ;
+  
    addLogin() {
     const newformData = {
      
@@ -46,8 +52,20 @@ export class LoginComponent implements OnInit {
      
      
     };
-    this.userService.userlogin(newformData).subscribe(data=>(console.log(data),  localStorage.setItem('token', JSON.stringify(data)))
+   
+    this.userService.userlogin(newformData).subscribe((data:any)=>{
+      console.log("hello",data);
+      let token=data.data
+  
+      localStorage.setItem('token', JSON.stringify(token))
+        }
+    
     );
     this.router.navigateByUrl("/books");
 }
+
 }
+function data(data: any) {
+  throw new Error('Function not implemented.');
+}
+

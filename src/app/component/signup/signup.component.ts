@@ -71,8 +71,12 @@ addLogin() {
    
    
   };
-  this.userService.userlogin(newformData).subscribe((data: any) =>
-    console.log((data),localStorage.setItem('token', JSON.stringify(data)))
+  this.userService.userlogin(newformData).subscribe((data: any) =>{
+    console.log("hello",data);
+    let token=data.data
+
+    localStorage.setItem('token', JSON.stringify(token))
+  }
   );
 }
 
