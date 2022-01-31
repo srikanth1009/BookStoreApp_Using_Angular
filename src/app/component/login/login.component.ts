@@ -19,10 +19,12 @@ export class LoginComponent implements OnInit {
     // Id  : number,
     emailId: string ='';
     password: string = '';
+    fetchedToken:Token=new Token();
  
   // user:any;
   signupForm:any;
   constructor(  private formBuilder: FormBuilder, private userService: UserService,   private router: Router,  private matSnakeBar: MatSnackBar) {
+    
     this.signupForm = formBuilder.group({
      
       emailId: new FormControl(),
@@ -46,7 +48,7 @@ export class LoginComponent implements OnInit {
      
      
     };
-    this.userService.userlogin(newformData).subscribe(data=>(console.log(data),  localStorage.setItem('token', JSON.stringify(data)))
+    this.userService.userlogin(newformData).subscribe((data:any)=>(console.log(data),localStorage.setItem('token', JSON.stringify(data)))
     );
     this.router.navigateByUrl("/books");
 }
