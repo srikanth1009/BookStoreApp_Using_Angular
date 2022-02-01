@@ -16,16 +16,16 @@ export class LoginComponent implements OnInit {
 
   public tok: Token = new Token;
   //Method for login
-
   [x: string]: any;
   hide: boolean = true;
   // Id  : number,
   emailId: string = '';
   password: string = '';
-
+  fetchedToken: Token = new Token();
   // user:any;
   signupForm: any;
   constructor(private formBuilder: FormBuilder, private userService: UserService, private router: Router, private matSnakeBar: MatSnackBar) {
+
     this.signupForm = formBuilder.group({
 
       emailId: new FormControl(),
@@ -35,14 +35,10 @@ export class LoginComponent implements OnInit {
   }
   ngOnInit(): void {
     //  console.log(this.model);
-
-
   }
   PostData(signupForm: any) {
     console.log(signupForm.controls);
-  }
-
-  ;
+  } ;
 
   addLogin() {
     const newformData = {

@@ -13,9 +13,10 @@ import { UserService } from 'src/app/service/user.service';
   styleUrls: ['./cart.component.scss']
 })
 export class CartComponent implements OnInit {
-  book = [];
-  public user : User = new User();
-  public cartList: Book[] = [];
+  
+  book:any;
+  public bookList: Book[] = [];
+  id!:number;
   public BookStoreFormGroup : FormGroup | undefined;
  
   constructor(private router : Router, 
@@ -26,12 +27,16 @@ export class CartComponent implements OnInit {
   }
 
  ngOnInit(): void {
-  this.cartService.getCartDetails().subscribe(data=> {
-    console.log("CART",data);
-    this.cartList = data.data;
-    console.log(this.book);
-   
-  });
+  this.id = this.route.snapshot.params['id'];
+ this.getCartList();
+  }
+  getCartList(){
+
+    this.cartService.getCartDetails().subscribe(data=> {
+      this.book=data.book;
+      console.log(data);
+    
+    });
   }
   counter = 1;
 
