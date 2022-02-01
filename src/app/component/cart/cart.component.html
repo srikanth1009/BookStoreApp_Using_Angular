@@ -7,13 +7,13 @@
   <h4 class="mycart">/Mycart</h4>
 </div>
 <div class="card1" >
-  <h2 class="h2mycart" >Mycart()</h2>
-  <div *ngFor="let book of cartList">
-  <img src="{{book.bookLogo}}" >
+  <h2 class="h2mycart" *ngFor="let book of bookList"  >Mycart()</h2>
+  <div  >
+  <img src="{{book?.data.bookLogo}}" >
   <div class="card1form">
-    <h4 class="card1name">{{book.bookName}}</h4>
-    <h4 class="card1author">{{book.bookAuthor}}</h4>
-    <h4 class="card1price">{{book.bookPrice}}</h4>
+    <h4 class="card1name">{{book?.data.bookName}}</h4>
+    <h4 class="card1author">{{book?.data.bookAuthor}}</h4>
+    <h4 class="card1price">{{book?.data.bookPrice}}</h4>
     <div class="increment">
       <button class="add" type="button" (click)="dicrement()">-</button>
       <input type="text" id="counter" value="{{counter}}" style="width: 16px;margin-left: -10px;margin-right: 5px;">
