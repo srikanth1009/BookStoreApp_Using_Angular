@@ -4,6 +4,7 @@ import { FormGroup } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Book } from '../model/book';
+import { Cart } from '../model/cart';
 import { Token } from '../model/token';
 import { BookService } from '../service/book.service';
 import { CartService } from '../service/cart.service';
@@ -19,6 +20,7 @@ export class DisplayBooksComponent implements OnInit {
   bookList:Book[]=[];
 
  id!:number;
+ cartModel:Cart = new Cart();
 //  model: Book = new Book();
   constructor( private route:ActivatedRoute,    private router : Router, 
     private bookservice: BookService, private matSnackBar: MatSnackBar, private cartService: CartService ) { 
@@ -43,14 +45,14 @@ export class DisplayBooksComponent implements OnInit {
  
   
 
-  AddToBag(book:any) {
-    console.log(book);
-    this.cartService.addToCart(book).subscribe(data =>{
-      console.log("post",data) ,localStorage.getItem('token');
+  AddToBag(id:any) {
+    this.cartModel.quantity= 1;
+    this.cartService.addToCart( this.id,this.cartModel ).subscribe((data: any) =>{
+      console.log("post",data) 
       this.matSnackBar.open('Book is added successfully to Cart ' , 'ok', {
         duration: 3000
       });
-      this.router.navigateByUrl("/"); 
+      this.router.navigateByUrl("/books"); 
     })
   }
   

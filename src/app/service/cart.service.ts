@@ -2,6 +2,7 @@ import { HttpClient,HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
+import { Cart } from '../model/cart';
 import { Token } from '../model/token';
 
 @Injectable({
@@ -19,13 +20,13 @@ t=JSON.parse(this.a || '{}');
 
    }
 
-  addToCart(reourceBody: { userId : number; bookId : number; quantity : number; }){
+  addToCart(bookId:number, cart:Cart):Observable<Object>{
     let myHead = new HttpHeaders({
     'content-type':'application/json',
     'token':this.t
    })
     let options = { headers: myHead }
-    return this.httpClient.post(`${this.base_url}/add`,reourceBody,options)
+    return this.httpClient.post(`${this.base_url}/add/${bookId}`,cart,options)
     
   }
 

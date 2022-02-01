@@ -29,10 +29,13 @@ export class CartComponent implements OnInit {
   this.cartService.getCartDetails().subscribe(data=> {
     console.log("CART",data);
     this.cartList = data.data;
-    console.log(this.book);
+
     // this.cartListLength = this.cartList.length;
   });
   }
+ 
+ 
+
   counter = 1;
 
   increment() {
