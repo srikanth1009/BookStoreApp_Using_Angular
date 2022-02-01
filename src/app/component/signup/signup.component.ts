@@ -14,67 +14,63 @@ import { UserService } from 'src/app/service/user.service';
 })
 export class SignupComponent implements OnInit {
 
-  model:User = new User();
+  model: User = new User();
   public showPassword: boolean | undefined;
 
   // public showPassword: boolean = false;
   showDetails: boolean | undefined;
   [x: string]: any;
   hide = true;
-    // Id  : number,
-    fullName:string ='';
-    emailId: string ='';
-    password: string = '';
-    mobileNo: string  = '';
+  // Id  : number,
+  fullName: string = '';
+  emailId: string = '';
+  password: string = '';
+  mobileNo: string = '';
   // user:any;
-  signupForm:any;
-  constructor(  private formBuilder: FormBuilder, private userService: UserService,   private router: Router,  private matSnakeBar: MatSnackBar) {
+  signupForm: any;
+  constructor(private formBuilder: FormBuilder, private userService: UserService, private router: Router, private matSnakeBar: MatSnackBar) {
     this.signupForm = formBuilder.group({
       fullName: new FormControl(),
       emailId: new FormControl(),
       password: new FormControl(),
       mobileNo: new FormControl(),
     });
-   }
-   ngOnInit(): void {}
-   PostData(signupForm: any) {
-     console.log(signupForm.controls);
-   }
-
-   addNewContact() {
+  }
+  ngOnInit(): void { }
+  PostData(signupForm: any) {
+    console.log(signupForm.controls);
+  }
+  addNewContact() {
     const newformData = {
       fullName: this.signupForm.controls.fullName.value,
       emailId: this.signupForm.controls.emailId.value,
       password: this.signupForm.controls.password.value,
       mobileNo: this.signupForm.controls.mobileNo.value,
-     
+
     };
     this.userService.createContact(newformData).subscribe((data: any) =>
       console.log((data))
     );
     this.router.navigateByUrl("/loginform");
-   
-}
-// public togglePasswordVisibility(): void {
-//   this.showPassword = !this.showPassword;
-// }
-onStrengthChanged(strength: number) {
-  console.log('password strength = ', strength);
-  
-  
-}
-addLogin() {
-  const newformData = {
-   
-    emailId: this.signupForm.controls.emailId.value,
-    password: this.signupForm.controls.password.value,
-   
-   
-  };
-  this.userService.userlogin(newformData).subscribe((data: any) =>
-    console.log((data),localStorage.setItem('token', JSON.stringify(data)))
-  );
-}
+  }
+  // public togglePasswordVisibility(): void {
+  //   this.showPassword = !this.showPassword;
+  // }
+  onStrengthChanged(strength: number) {
+    console.log('password strength = ', strength);
+  }
+  addLogin() {
+    const newformData = {
 
+      emailId: this.signupForm.controls.emailId.value,
+      password: this.signupForm.controls.password.value,
+    };
+    this.userService.userlogin(newformData).subscribe((data: any) => {
+      console.log(data);
+      let token = data.data
 
+      localStorage.setItem('token', JSON.stringify(token))
+    }
+    );
+  }
 }

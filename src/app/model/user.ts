@@ -1,7 +1,7 @@
 export class User{
 
 
-    // Id: any;
+    userId:number | undefined
     fullName: string | undefined;
     emailId:string | undefined;
     password:string | undefined;

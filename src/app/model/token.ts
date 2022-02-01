@@ -1,5 +1,6 @@
 export class Token{
-    public token:string | undefined = ''
+    token: string | undefined 
+    // mess!: string
   
 
 }
