@@ -1,54 +1,55 @@
-<div>
+<div > 
 
-<app-header></app-header>
-<div fxLayout="row" fxLayoutAlign="space-between center">
-  <div id="items">
-    Books
-    <span id="active"> (3items) </span>
+  <app-header></app-header>
+  <div fxLayout="row" fxLayoutAlign="space-between center">
+    <div id="items">
+      Books
+      <span id="active"> (3items) </span>
+    </div>
   </div>
-</div>
-<div class="body" >
-  
-<div class="whole-div">
-  <div class="inputs" style="       margin-left: 909px;
+  <div class="body">
+
+    <div class="whole-div">
+      <div class="inputs" style="       margin-left: 909px;
   margin-top: -46px;">
-    <select id="select_baseUrl" name="select_baseUrl">
-        <option >Sort by relevance</option>
-    </select><input id="input_baseUrl" name="baseUrl" type="text"
-        style="display: none;">
-</div>
- 
-</div>
-<div fxLayout="row wrap" fxLayoutGap="5px grid" class="maincard">
-  <div  style="margin: 0px;" fxFlex="25%" (click)="onClickBook(item.bookId)"
-    *ngFor="let item of bookList" >
-    <mat-card class="mainvalue">
-      <div class="bookImageDiv" fxLayoutAlign="center">
-        <img src="{{item.bookLogo}}" />
+        <select id="select_baseUrl" name="select_baseUrl">
+          <option>Sort by relevance</option>
+        </select><input id="input_baseUrl" name="baseUrl" type="text" style="display: none;">
+      </div>
+
+    </div>
+    <div fxLayout="row wrap" fxLayoutGap="5px grid" class="maincard">
+      <div style="margin: 0px;" fxFlex="25%" (click)="onClickBook(item.bookId)"
+        *ngFor="let item of bookList | paginate: { itemsPerPage: 10, currentPage: page,totalItems:totalLength }">
+        <mat-card class="mainvalue">
+          <div class="bookImageDiv" fxLayoutAlign="center">
+            <img src="{{item.bookLogo}}" />
+
+          </div>
+          <div class="bookInfoDiv" fxLayout="column">
+            <mat-card-content class="matcard">
+              <div class="a">
+                <mat-card-title>{{item.bookName}}</mat-card-title>
+                <mat-card-subtitle>{{item.bookAuthor}}</mat-card-subtitle>
+              </div>
+              <div><img class="rating" src="../../assets/bookimages/rating.png" /></div><br>
+              <div class="price">Rs.{{item.bookPrice}}</div>
+            </mat-card-content>
+            <div class="left" fxLayout="row" fxLayoutAlign="space-around center">
+
+            </div>
+          </div>
+        </mat-card>
         
       </div>
-      <div class="bookInfoDiv" fxLayout="column" >
-        <mat-card-content class="matcard" >
-          <div class="a">
-            <mat-card-title>{{item.bookName}}</mat-card-title>
-            <mat-card-subtitle>{{item.bookAuthor}}</mat-card-subtitle>
-          </div>
-          <div><img class="rating" src="../../assets/bookimages/rating.png" /></div><br>
-          <div class="price">Rs.{{item.bookPrice}}</div>
-        </mat-card-content>
-        <div class="left" fxLayout="row" fxLayoutAlign="space-around center">
+      
 
-        </div>
-      </div>
-    </mat-card>
+    </div>
+    <div class="pagination" style="margin-left: 450px;width: 400px;">
+      <pagination-controls class="text-center my-pagination"  (pageChange)="page = $event"></pagination-controls>
+    </div>
+    <app-footer></app-footer>
   </div>
-</div>
-<div class="pagechange">
-  <!-- <mat-paginator 
-   [length]="length"
-   [pageSize]="pageSize" 
-   [pageSizeOptions]="pageSizeOptions"
-   [showFirstLastButtons]="true">
-</mat-paginator> -->
-</div> 
+ 
+  
 </div>

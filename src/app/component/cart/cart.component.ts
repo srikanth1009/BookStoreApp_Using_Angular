@@ -15,9 +15,12 @@ import { UserService } from 'src/app/service/user.service';
 export class CartComponent implements OnInit {
   
   book:any;
-  public bookList: Book[] = [];
-  id!:number;
-  public BookStoreFormGroup : FormGroup | undefined;
+  public bookList = [];
+  bookquant=0
+  booklisadd:any=[];
+  booklistdetail:Array<any>=[];
+  id: any;
+  // public BookStoreFormGroup : FormGroup | undefined;
  
   constructor(private router : Router, 
     private route : ActivatedRoute,
@@ -33,9 +36,26 @@ export class CartComponent implements OnInit {
   getCartList(){
 
     this.cartService.getCartDetails().subscribe(data=> {
-      this.book=data.book;
-      console.log(data);
-    
+      this.bookList=data.cartlist;
+      this.bookquant=data.cartlist[0].book
+     this.booklistdetail= this.bookList.map((element:any) =>{
+        // console.log(element.book);
+        if(element.book){
+          // this.booklistdetail.push(element.book)
+          return element.book
+        }
+        // this.booklisadd=element;
+        // console.log(this.booklisadd);
+        
+      })
+      console.log(this.booklistdetail);
+      
+      // console.log(this.bookquant);
+      
+      // console.log("hello",this.bookList);
+      
+  
+      // this.cartListLength = this.cartList.length;
     });
   }
   counter = 1;
