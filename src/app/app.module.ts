@@ -34,6 +34,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { Token } from './model/token';
 import { User } from './model/user';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import {NgxPaginationModule} from 'ngx-pagination'; 
 
 @NgModule({
   declarations: [
@@ -73,7 +74,8 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     MatGridListModule,
     FlexLayoutModule,
     MatListModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    NgxPaginationModule
     
 
 

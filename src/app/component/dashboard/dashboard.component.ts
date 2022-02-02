@@ -18,6 +18,10 @@ export class DashboardComponent implements OnInit {
   bookList:Book[]=[];
  
  constructor(private bookservice: BookService , private router: Router ){}
+ totalLength:any;
+ page:number =1;
+ 
+
  ngOnInit(){
    //get
    this.bookservice.getBooks().subscribe( data => { 

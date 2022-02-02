@@ -14,10 +14,13 @@
   margin-top: -46px;">
     <select id="select_baseUrl" name="select_baseUrl">
         <option >Sort by relevance</option>
+        <option>Sort By Relevance</option>
+        <option>Price:Low to High</option>
+        <option>Price:High to Low</option>
+        <option>Newest Arrivals</option>
     </select><input id="input_baseUrl" name="baseUrl" type="text"
         style="display: none;">
 </div>
- 
 </div>
 <div fxLayout="row wrap" fxLayoutGap="5px grid" class="maincard">
   <div  style="margin: 0px;" fxFlex="25%" (click)="onClickBook(item.bookId)"
@@ -44,11 +47,15 @@
   </div>
 </div>
 <div class="pagechange">
-  <!-- <mat-paginator 
-   [length]="length"
-   [pageSize]="pageSize" 
-   [pageSizeOptions]="pageSizeOptions"
-   [showFirstLastButtons]="true">
-</mat-paginator> -->
+  <div class="pagination">
+    <a href="books">&laquo;</a>
+    <a href="books">1</a>
+    <a class="active" href="books">2</a>
+    <a href="books">3</a>
+    <a href="books">4</a>
+    <a href="books">5</a>
+    <a href="books">6</a>
+    <a href="books">&raquo;</a>
+  </div>
 </div> 
 </div>
