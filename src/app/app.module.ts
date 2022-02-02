@@ -33,8 +33,7 @@ import { AuthGuard } from './service/auth.guard';
 import { MatDialog } from '@angular/material/dialog';
 import { Token } from './model/token';
 import { User } from './model/user';
-import {MatPaginatorModule} from '@angular/material/paginator';
-import {NgxPaginationModule} from 'ngx-pagination'; 
+import {NgxPaginationModule} from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -74,8 +73,8 @@ import {NgxPaginationModule} from 'ngx-pagination';
     MatGridListModule,
     FlexLayoutModule,
     MatListModule,
-    MatPaginatorModule,
     NgxPaginationModule
+   
     
 
 

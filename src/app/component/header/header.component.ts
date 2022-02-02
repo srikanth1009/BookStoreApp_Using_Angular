@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -9,9 +9,16 @@ import { Router } from '@angular/router';
 export class HeaderComponent implements OnInit {
   showMe: boolean =false;
   
-  constructor( private router: Router) { }
+  searchTerm:string ="";
+
+  constructor( private router: Router, private route:ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.route.params.subscribe(params =>{
+      this.searchTerm = params['searchTerm'];
+    })
+
+
   }
   removeToken(){
     localStorage.removeItem("token");

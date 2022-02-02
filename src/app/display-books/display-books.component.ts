@@ -43,7 +43,11 @@ export class DisplayBooksComponent implements OnInit {
     this.cartModel.quantity = 1;
     this.cartService.addToCart(this.id, this.cartModel).subscribe((data: any) => {
       console.log("post", data)
-      this.router.navigateByUrl("/books");
+      this.matSnackBar.open('Book is added successfully to Cart ', 'Ok', {
+        duration: 9000,
+      });
+      this.router.navigateByUrl("/display");
+
     })
   }
 }

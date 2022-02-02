@@ -12,14 +12,15 @@ import { BookService } from 'src/app/service/book.service';
 })
 export class DashboardComponent implements OnInit {
 
-
+ totalLength:any;
+ page:number=1;
   submitted=false;
   book:any;
   bookList:Book[]=[];
  
  constructor(private bookservice: BookService , private router: Router ){}
- totalLength:any;
- page:number =1;
+//  totalLength:any;
+//  page:number =1;
  
 
  ngOnInit(){
@@ -27,6 +28,7 @@ export class DashboardComponent implements OnInit {
    this.bookservice.getBooks().subscribe( data => { 
      this.book=data;
      this.bookList=this.book.data;
+     this.totalLength=data.length;
        console.log(this.bookList);
 
         });

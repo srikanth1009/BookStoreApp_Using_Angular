@@ -26,6 +26,7 @@ const routes: Routes = [
   {path:'forgot', component:ForgotPasswordComponent},
   {path:'books', component:DashboardComponent, canActivate: [AuthGuard]},
   {path:'display/:id', component:DisplayBooksComponent},
+  {path: 'search/:searchTerm', component:DisplayBooksComponent},
   {path:'profile', component:EditProfileComponent},
   {path: 'myorder', component: MyOrderComponent},
   {path:'cart',component:CartComponent},
