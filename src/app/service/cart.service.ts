@@ -35,7 +35,8 @@ t=JSON.parse(this.a || '{}');
       let options = { headers: myHead }
     return this.httpClient.get(`${this.base_url}/get`,options);
   }
-  removeCartDetails(id:any){
-    return this.httpClient.delete(`${this.base_url}/remove/${id}`)
+
+  removeCartDetails(cartId:number){
+    return this.httpClient.delete(`${this.base_url}/remove/${cartId}`)
   }
 }

@@ -48,10 +48,18 @@ export class CartComponent implements OnInit {
           
           return element.book
         }
-       
-        
       })
       console.log(this.booklistdetail);
+      this.cartId=this.bookList.map((cartid:any) =>{
+        if (cartid.id){
+          return cartid.id
+        }
+      })
+      console.log(this.cartId);
+      
+      // console.log(this.bookList);
+      
+      
       
       // console.log(this.bookquant);
       
@@ -61,11 +69,12 @@ export class CartComponent implements OnInit {
       // this.cartListLength = this.cartList.length;
     });
   }
-  removeCart(id:number){
-    this.cartService.removeCartDetails(id).subscribe(data =>{
-      this.id = data
-      console.log(data);
-    })
+  removeCart(cartId:number){
+    this.cartService.removeCartDetails(cartId).subscribe((resource=>{
+      
+
+    }))
+
   }
 
   counter = 1;

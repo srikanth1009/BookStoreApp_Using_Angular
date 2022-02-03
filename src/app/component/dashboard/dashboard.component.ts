@@ -33,16 +33,6 @@ export class DashboardComponent implements OnInit {
 
         });
   }
-  //   get f(){
-  //   return this.registerForm.controls;
-  // }
-  // getOne(){
-  //   this.bookservice.getOne(this.bookId).subscribe( data => { 
-  //     // this.data = data;
-  //     console.log(data);
-      
-  //   })
-  // }
   onClickBook(id:number) {
     this.router.navigate([`display/${id}`]);
   }

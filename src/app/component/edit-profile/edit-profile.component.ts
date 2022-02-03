@@ -7,13 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditProfileComponent implements OnInit {
   public hide:boolean=true;
-  
-  
   constructor() { }
 
   ngOnInit(): void {
   }
-
-  
-
 }
