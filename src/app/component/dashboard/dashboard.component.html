@@ -23,7 +23,7 @@
     </div>
     <div fxLayout="row wrap" fxLayoutGap="5px grid" class="maincard">
       <div style="margin: 0px;" fxFlex="25%" (click)="onClickBook(item.bookId)"
-        *ngFor="let item of bookList | filter:searchKey:'bookName'  paginate: { itemsPerPage: 10, currentPage: page,totalItems:totalLength }">
+        *ngFor="let item of bookList | filter:searchKey:'bookName'  | paginate: { itemsPerPage: 10, currentPage: page,totalItems:totalLength }">
         <mat-card class="mainvalue">
           <div class="bookImageDiv" fxLayoutAlign="center">
             <img src="{{item.bookLogo}}" />
