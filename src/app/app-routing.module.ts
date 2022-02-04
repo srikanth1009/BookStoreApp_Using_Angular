@@ -31,7 +31,11 @@ const routes: Routes = [
   {path:'cart',component:CartComponent},
   {path:'wishlist',component:WishlistComponent},
   {path:'wishlistlogin',component:WhishlistLoginSignupComponent},
-  { path: 'order', component: OrderSucessfulComponent }
+  { path: 'order', component: OrderSucessfulComponent },
+  // { path: '' , redirectTo: 'loginform', pathMatch: 'full'},
+  { path: '' , redirectTo: 'signupform', pathMatch: 'full'},
+  {path:'forgot', component:ForgotPasswordComponent}
+
 ];
 
 @NgModule({
