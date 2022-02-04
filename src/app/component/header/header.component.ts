@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { UserService } from 'src/app/service/user.service';
 
 @Component({
   selector: 'app-header',
@@ -10,8 +11,10 @@ export class HeaderComponent implements OnInit {
   showMe: boolean =false;
   
   searchTerm:string ="";
+  isCart: boolean | undefined;
+  searchBook: string | undefined;
 
-  constructor( private router: Router, private route:ActivatedRoute) { }
+  constructor(private userService: UserService, private router: Router, private route:ActivatedRoute) { }
 
   ngOnInit(): void {
     this.route.params.subscribe(params =>{
@@ -31,4 +34,8 @@ export class HeaderComponent implements OnInit {
 toogleTag(){
   this.showMe=!this.showMe
 }
+// onKey(event: any) {
+//   this.userService.searchUserBook(event);
+//   this.isCart = false;
+// }
 }

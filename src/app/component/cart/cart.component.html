@@ -5,27 +5,40 @@
     <h4 class="home">Home </h4>
   </a>
   <h4 class="mycart">/Mycart</h4>
+
 </div>
-<div class="card1">
+
+<div class="card1"><br>
+  <div xFlex="30">
+
+    <select name="location" id="" class="location-tab">
+      <option value="" class="select-text"> Use Current Location</option>
+      <option value="">Mumbai</option>
+      <option value="">Goa</option>
+    </select>
+  </div>
   <h2 class="h2mycart">Mycart()</h2>
+
   <div *ngFor="let bookdetils of booklistdetail">
-    <img src="{{bookdetils.bookLogo}}" >
+    <img src="{{bookdetils.bookLogo}}">
     <!-- <span>{{book}}</span> -->
-    <div class="card1form" >
+    <div class="card1form">
       <h4 class="card1name">{{bookdetils.bookName}}</h4>
       <h4 class="card1author">{{bookdetils.bookAuthor}}</h4>
       <h4 class="card1price">Rs.{{bookdetils.bookPrice}}</h4>
-      <div class="increment">
-        <button class="add" type="button" (click)="dicrement()">-</button>
-        <input type="text" id="counter" value="{{counter}}" style="width: 16px;margin-left: -10px;margin-right: 5px;">
-        <button class="sub" type="button" (click)="increment()">+</button>
-        <button class="removebutton" (click)="removeCart(id)">Remove</button>
-      </div>
-      
     </div>
+
+    <div class="increment">
+      <button class="add" type="button" (click)="dicrement()">-</button>
+      <input type="text" id="counter" value="{{counter}}" style="width: 16px;margin-left: -10px;margin-right: 5px;">
+      <button class="sub" type="button" (click)="increment()">+</button>
+      <button class="removebutton" (click)="removeCart(id)">Remove</button>
+    </div><br><br>
+
   </div>
-  <button class="btncontinue" style="margin-left: 400px;" type="button" routerLink="/order">PlaceOrder</button>
+  <button class="btncontinue" type="button" routerLink="/order">PlaceOrder</button>
 </div>
+
 <div class="card2">
   <mat-expansion-panel hideToggle>
     <mat-expansion-panel-header>

@@ -71,9 +71,10 @@ left: 316px;
 width: 133px;
 height: 17px;
 text-align: left;
-font: normal normal normal 14px/17px Lato;
+font: normal normal normal 15px/18px Lato;
 letter-spacing: 0px;
 color: #0A0102;
+font-weight: 200;
 opacity: 1;
 }
 .card1author{
@@ -82,6 +83,7 @@ text-align: left;
 font: normal normal normal 10px/12px Lato;
 letter-spacing: 0px;
 color: #9D9D9D;
+font-size: small;
 opacity: 1;
 }
 .card1price{
@@ -95,19 +97,29 @@ opacity: 1;
 .removebutton{
     margin-right: -126px;
     margin-left: 31px;
+
+text-align: left;
+font: normal normal normal 12px/15px Lato;
+letter-spacing: 0px;
+color: #0A0102;
 }
 .increment{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    // height: -56%;
     text-align: center;
-    margin-left: -36px;
-    margin-top: 33px;
+    margin-left: 88px;
+    margin-top: 3px;
     width: 158px;
 }
-
+.location-tab{
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    margin-left: 502px;
+// border: 1px solid #DCDCDC;
+// border-radius: 1px;
+opacity: 1;
+}
 .add,sub{
 background: #FAFAFA 0% 0% no-repeat padding-box;
 border: 1px solid #DBDBDB;
@@ -173,17 +185,17 @@ opacity: 1;
     gap: 20px;
 }
 .btncontinue{
-width: 100px;
-height: 30px;
-background: $skyblue 0% 0% no-repeat padding-box;
-border-radius: 3px;
-font: normal normal medium 14px/17px Lato;
-font-size: 12px;
-
-letter-spacing: 0px;
-color: #FFFFFF;
-text-transform: uppercase;
-opacity: 1;
-margin-top: 20px;
-margin-left: 200px;
+    width: 129px;
+    height: 30px;
+    background: #3371B5 0% 0% no-repeat padding-box;
+    border-radius: 3px;
+    font: normal normal medium 14px/17px Lato;
+    margin-left: 542px;
+    font-size: 12px;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    opacity: 1;
+    margin-top: 5px;
+    margin-left: 537px;
 }

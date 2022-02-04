@@ -14,78 +14,75 @@ import { UserService } from 'src/app/service/user.service';
   styleUrls: ['./cart.component.scss']
 })
 export class CartComponent implements OnInit {
-  
-  cart : Array<any>=[];
-  cartId:any;
-  book:any;
+
+  cart: Array<any> = [];
+  cartId: any;
+  book: any;
   public bookList = [];
-  cartlist : any;
-  bookquant=0
-  booklisadd:any=[];
-  booklistdetail:Array<any>=[];
+  cartlist: any;
+  bookquant = 0
+  booklisadd: any = [];
+  booklistdetail: Array<any> = [];
   id: any;
   // public BookStoreFormGroup : FormGroup | undefined;
- 
-  constructor(private router : Router, 
-    private route : ActivatedRoute,
+
+  constructor(private router: Router,
+    private route: ActivatedRoute,
     private cartService: CartService,
-    private userService: UserService,) { 
-    
+    private userService: UserService,) {
+
   }
 
- ngOnInit(): void {
-  this.id = this.route.snapshot.params['id'];
- this.getCartList();
+  ngOnInit(): void {
+    this.id = this.route.snapshot.params['id'];
+    this.getCartList();
+    // this.removeCarts(this.id);
   }
-  getCartList(){
+  getCartList() {
 
-    this.cartService.getCartDetails().subscribe(data=> {
-      this.bookList=data.cartlist;
-      // this.bookquant=data.cartlist[0].book
-     this.booklistdetail= this.bookList.map((element:any) =>{
-  
-        if(element.book){
-          
+    this.cartService.getCartDetails().subscribe(data => {
+      this.bookList = data.cartlist;
+      this.bookquant = data.cartlist[0].book
+      this.booklistdetail = this.bookList.map((element: any) => {
+
+        if (element.book) {
+
           return element.book
         }
       })
       console.log(this.booklistdetail);
-      this.cartId=this.bookList.map((cartid:any) =>{
-        if (cartid.id){
+      this.cartId = this.bookList.map((cartid: any) => {
+        if (cartid.id) {
           return cartid.id
         }
       })
       console.log(this.cartId);
-      
-      // console.log(this.bookList);
-      
-      
-      
-      // console.log(this.bookquant);
-      
-      // console.log("hello",this.bookList);
-      
-  
-      // this.cartListLength = this.cartList.length;
     });
   }
-  removeCart(cartId:number){
-    this.cartService.removeCartDetails(cartId).subscribe((resource=>{
-      
+
+  removeCart(cartid: number) {
+    this.cartService.removeCartDetails(cartid).subscribe((resource => {
 
     }))
 
   }
+  // removeCarts(id: number) {
+  //   for (let index = 0; index < this.cartId.length; index++) {
+  //     const element = this.cartId[index];
+  //     console.log( element );
 
+  //   }
+
+  // }
   counter = 1;
 
   increment() {
-    if(this.counter<10)
-    this.counter++;
+    if (this.counter < 10)
+      this.counter++;
   }
   dicrement() {
-    if(this.counter>1){
-    this.counter--;
+    if (this.counter > 1) {
+      this.counter--;
     }
   }
 }

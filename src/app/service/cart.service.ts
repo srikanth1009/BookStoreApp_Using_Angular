@@ -36,7 +36,9 @@ t=JSON.parse(this.a || '{}');
     return this.httpClient.get(`${this.base_url}/get`,options);
   }
 
-  removeCartDetails(cartId:number){
-    return this.httpClient.delete(`${this.base_url}/remove/${cartId}`)
+  removeCartDetails(id:number){
+    return this.httpClient.delete(`${this.base_url}/remove/${id}`)
+
   }
+  
 }
