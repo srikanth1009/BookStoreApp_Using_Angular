@@ -14,7 +14,6 @@ import { UserService } from 'src/app/service/user.service';
   styleUrls: ['./cart.component.scss']
 })
 export class CartComponent implements OnInit {
-
   cart: Array<any> = [];
   cartId: any;
   book: any;
@@ -32,7 +31,6 @@ export class CartComponent implements OnInit {
     private userService: UserService,) {
 
   }
-
   ngOnInit(): void {
     this.id = this.route.snapshot.params['id'];
     this.getCartList();
@@ -59,12 +57,10 @@ export class CartComponent implements OnInit {
       console.log(this.cartId);
     });
   }
-
   removeCart(cartid: number) {
     this.cartService.removeCartDetails(cartid).subscribe((resource => {
 
     }))
-
   }
   // removeCarts(id: number) {
   //   for (let index = 0; index < this.cartId.length; index++) {
@@ -75,7 +71,6 @@ export class CartComponent implements OnInit {
 
   // }
   counter = 1;
-
   increment() {
     if (this.counter < 10)
       this.counter++;

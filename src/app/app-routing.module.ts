@@ -1,7 +1,6 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CartComponent } from './component/cart/cart.component';
-
 import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { EditProfileComponent } from './component/edit-profile/edit-profile.component';
 import { ForgotPasswordComponent } from './component/forgot-password/forgot-password.component';
@@ -20,9 +19,9 @@ const routes: Routes = [
   // {path:'', component:LoginComponent},
   // {path:'', component:SignupComponent},
   {path:'loginform', component:LoginComponent},
+  { path: '' , redirectTo: 'loginform', pathMatch: 'full' },
   {path:'signupform', component:SignupComponent },
   { path: 'reset/:token', component: ResetComponent},
-  { path: '' , redirectTo: 'signupform', pathMatch: 'full' },
   {path:'forgot', component:ForgotPasswordComponent},
   {path:'books', component:DashboardComponent, canActivate: [AuthGuard]},
   {path:'display/:id', component:DisplayBooksComponent},
@@ -33,10 +32,6 @@ const routes: Routes = [
   {path:'wishlist',component:WishlistComponent},
   {path:'wishlistlogin',component:WhishlistLoginSignupComponent},
   { path: 'order', component: OrderSucessfulComponent }
-
- 
-
-
 ];
 
 @NgModule({

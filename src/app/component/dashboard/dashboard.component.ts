@@ -11,7 +11,6 @@ import { BookService } from 'src/app/service/book.service';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-
  totalLength:any;
  page:number=1;
   submitted=false;

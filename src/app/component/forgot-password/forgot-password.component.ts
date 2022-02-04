@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl } from '@angular/forms';
-import { MatSnackBar } from '@angular/material/snack-bar';
-import { Router } from '@angular/router';
 import { FortgotPassword } from 'src/app/model/forgot-password';
 import { UserService } from 'src/app/service/user.service';
 
@@ -12,9 +10,7 @@ import { UserService } from 'src/app/service/user.service';
 })
 export class ForgotPasswordComponent implements OnInit {
   forgot:FortgotPassword = new FortgotPassword();
-
   constructor(private service:UserService) { }
-
   ngOnInit(): void {
   }
 
