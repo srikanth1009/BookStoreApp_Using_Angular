@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Book } from '../model/book';
 
@@ -8,6 +8,8 @@ import { Book } from '../model/book';
   providedIn: 'root'
 })
 export class BookService {
+  public search=new BehaviorSubject<string>("");
+
   getBookDetails() {
     throw new Error('Method not implemented.');
   }

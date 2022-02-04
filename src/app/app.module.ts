@@ -34,6 +34,8 @@ import { MatDialog } from '@angular/material/dialog';
 import { Token } from './model/token';
 import { User } from './model/user';
 import {NgxPaginationModule} from 'ngx-pagination';
+import { FilterPipe } from './pipe/filter.pipe';
+
 
 @NgModule({
   declarations: [
@@ -53,7 +55,8 @@ import {NgxPaginationModule} from 'ngx-pagination';
     OrderSucessfulComponent,
     WhishlistLoginSignupComponent,
     EditProfileComponent,
-    
+    FilterPipe
+   
    
   ],
   imports: [

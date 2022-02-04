@@ -1,6 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormGroup } from '@angular/forms';
-
 import { Router } from '@angular/router';
 import { Book } from 'src/app/model/book';
 import { BookService } from 'src/app/service/book.service';
@@ -11,12 +10,13 @@ import { BookService } from 'src/app/service/book.service';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
+  
  totalLength:any;
  page:number=1;
   submitted=false;
   book:any;
   bookList:Book[]=[];
- 
+  searchKey:string="";
  constructor(private bookservice: BookService , private router: Router ){}
 //  totalLength:any;
 //  page:number =1;
@@ -29,10 +29,15 @@ export class DashboardComponent implements OnInit {
      this.bookList=this.book.data;
      this.totalLength=data.length;
        console.log(this.bookList);
-
+       this.searchBook();
         });
   }
   onClickBook(id:number) {
     this.router.navigate([`display/${id}`]);
+  }
+  searchBook() {
+    this.bookservice.search.subscribe((val: any) => {
+      this.searchKey=val;
+    })
   }
 }

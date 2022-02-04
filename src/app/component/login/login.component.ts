@@ -15,14 +15,11 @@ import { UserService } from 'src/app/service/user.service';
 export class LoginComponent implements OnInit {
 
   public tok: Token = new Token;
-  //Method for login
   [x: string]: any;
   hide: boolean = true;
-  // Id  : number,
   emailId: string = '';
   password: string = '';
   fetchedToken: Token = new Token();
-  // user:any;
   signupForm: any;
   constructor(private formBuilder: FormBuilder, private userService: UserService, private router: Router, private matSnakeBar: MatSnackBar) {
 
@@ -34,7 +31,7 @@ export class LoginComponent implements OnInit {
     });
   }
   ngOnInit(): void {
-    //  console.log(this.model);
+
   }
   PostData(signupForm: any) {
     console.log(signupForm.controls);
@@ -47,7 +44,7 @@ export class LoginComponent implements OnInit {
       password: this.signupForm.controls.password.value,
     };
     this.userService.userlogin(newformData).subscribe((data: any) => {
-      console.log("hello", data);
+      console.log(data);
       let token = data.data
 
       localStorage.setItem('token', JSON.stringify(token))

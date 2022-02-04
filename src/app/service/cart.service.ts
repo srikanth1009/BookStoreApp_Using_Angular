@@ -5,7 +5,6 @@ import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Cart } from '../model/cart';
-import { Token } from '../model/token';
 
 @Injectable({
   providedIn: 'root'

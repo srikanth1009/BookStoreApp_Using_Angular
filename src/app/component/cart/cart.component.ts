@@ -23,8 +23,6 @@ export class CartComponent implements OnInit {
   booklisadd: any = [];
   booklistdetail: Array<any> = [];
   id: any;
-  // public BookStoreFormGroup : FormGroup | undefined;
-
   constructor(private router: Router,
     private route: ActivatedRoute,
     private cartService: CartService,
@@ -34,7 +32,6 @@ export class CartComponent implements OnInit {
   ngOnInit(): void {
     this.id = this.route.snapshot.params['id'];
     this.getCartList();
-    // this.removeCarts(this.id);
   }
   getCartList() {
 
@@ -57,19 +54,11 @@ export class CartComponent implements OnInit {
       console.log(this.cartId);
     });
   }
-  removeCart(cartid: number) {
-    this.cartService.removeCartDetails(cartid).subscribe((resource => {
-
+  removeCart(id: number) {
+    this.cartService.removeCartDetails(id).subscribe((data => {
+    
     }))
   }
-  // removeCarts(id: number) {
-  //   for (let index = 0; index < this.cartId.length; index++) {
-  //     const element = this.cartId[index];
-  //     console.log( element );
-
-  //   }
-
-  // }
   counter = 1;
   increment() {
     if (this.counter < 10)

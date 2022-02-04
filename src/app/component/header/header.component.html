@@ -10,7 +10,7 @@
         <div>
 
             <mat-icon>search <button class="searchtab"></button>
-                <input placeholder="Search" class="serachinput">
+                <input placeholder="Search" class="serachinput"  [(ngModel)]="searchTerm" (keyup)="search($event)" >
             </mat-icon>
 
 
